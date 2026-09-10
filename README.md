@@ -1,10 +1,16 @@
 # ReSerendipity
 
+[![GitHub followers](https://img.shields.io/github/followers/ReSerendipity?style=flat&label=followers)](https://github.com/ReSerendipity?tab=followers)
+[![Public repositories](https://img.shields.io/badge/public%20repositories-view-181717?logo=github)](https://github.com/ReSerendipity?tab=repositories)
+[![Open source](https://img.shields.io/badge/open%20source-Apache--2.0-blue)](https://github.com/ReSerendipity?tab=repositories)
+
 ## 你好，我是 ReSerendipity
 
 我主要维护多模态 AI 应用与创作工具方向的开源项目，关注**图片生成与处理、视频工作流、语音合成、桌面 / 移动端工具**以及把复杂模型做成普通用户能直接使用的产品。
 
 这里的项目大多优先考虑本地运行、可复现和轻量 Web / 桌面界面。欢迎通过 Issue、Pull Request 或讨论交流想法。
+
+**快速入口：** [查看全部仓库](https://github.com/ReSerendipity?tab=repositories) · [查看贡献活动](https://github.com/ReSerendipity?tab=overview) · [提交 Issue](https://github.com/ReSerendipity?tab=issues)
 
 ## 精选项目
 
