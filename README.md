@@ -1,8 +1,12 @@
 # ReSerendipity
 
-主要维护多模态 AI 应用与工具方向的开源项目。
+## 你好，我是 ReSerendipity
 
-## 项目
+我主要维护多模态 AI 应用与创作工具方向的开源项目，关注**图片生成与处理、视频工作流、语音合成、桌面 / 移动端工具**以及把复杂模型做成普通用户能直接使用的产品。
+
+这里的项目大多优先考虑本地运行、可复现和轻量 Web / 桌面界面。欢迎通过 Issue、Pull Request 或讨论交流想法。
+
+## 精选项目
 
 | 仓库 | 简介 |
 |---|---|
@@ -15,6 +19,25 @@
 | [ComfyUI-BatchPromptLoader](https://github.com/ReSerendipity/ComfyUI-BatchPromptLoader) | ComfyUI 自定义节点：从 TXT 批量加载提示词（固定 / 递增 / 递减 / 随机） |
 | [Multi-Tracker](https://github.com/ReSerendipity/Multi-Tracker) | 多平台视频创作者工具箱：B 站 / 抖音 / 快手 / 小红书 视频下载、飞书同步、评论与 AI 转写 |
 | [Unfading-Wall](https://github.com/ReSerendipity/Unfading-Wall) | 教师节「黑板上的话」师生印象墙，零后端链接分享 |
+| [Card-Studio](https://github.com/ReSerendipity/Card-Studio) | 浏览器端多视角 3D 闪光卡生成器，支持抠图、分层合成与旋转查看 |
+| [Lineart_Painter](https://github.com/ReSerendipity/Lineart_Painter) | 本地图片 / 视频 AI 临摹重绘工作台，支持线稿、分阶段上色与风格化 |
+
+## 我正在关注
+
+- 将本地 AI 模型封装成易启动、易理解、易分享的工具
+- 图片、视频和声音创作流程中的自动化与批处理
+- Web、Tauri、Android 等跨平台交付方式
+- 模型权重、第三方依赖和开源许可证的清晰边界
+
+## 开源协作
+
+如果你发现问题或有改进建议：
+
+1. 先查看对应仓库的 README 和 Issue。
+2. Bug、功能建议和使用问题请使用仓库提供的 Issue 模板。
+3. 代码或文档改进请提交 Pull Request，并遵循组织级贡献指南。
+
+默认社区健康文件和贡献约定见 [ReSerendipity/.github](https://github.com/ReSerendipity/.github)。各项目的许可证以其仓库中的 `LICENSE` 为准。
 
 ## 治理约定
 
