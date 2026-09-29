@@ -1,0 +1,26 @@
+# ReSerendipity (profile repo): minimal README integrity check
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: README integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: README exists and is non-empty
+        run: |
+          test -f README.md
+          test -s README.md
+          echo "README.md ($(wc -c < README.md) bytes) OK"
