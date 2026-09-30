@@ -24,3 +24,5 @@ jobs:
           test -f README.md
           test -s README.md
           echo "README.md ($(wc -c < README.md) bytes) OK"
+      - name: Check featured projects and links
+        run: python3 .github/scripts/check_readme.py
