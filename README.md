@@ -31,4 +31,40 @@
 
 ---
 
-**更多项目**：欢迎在 [全部仓库](https://github.com/ReSerendipity?tab=repositories) 中浏览。
+## 全部公开项目
+
+### AI 创作与媒体
+
+| 项目 | 简介 |
+|---|---|
+| [Image-duoModel](https://github.com/ReSerendipity/Image-duoModel) | AI 图像生成平台：进程内原生引擎驱动 Z-Image Turbo，LoRA 叠加、SeedVR2 超分、批量生成、DCT 水印溯源 |
+| [MiniMax-H3-Lite](https://github.com/ReSerendipity/MiniMax-H3-Lite) | MiniMax H3 本地视频生成时间线工作台：T2V/I2V/R2V 三模式、多镜头编排，一键启动 / Docker |
+| [RTX-VSR-Lite](https://github.com/ReSerendipity/RTX-VSR-Lite) | 基于 NVIDIA RTX VSR 的独立视频超分命令行工具（RTX 20 系以上） |
+| [ComfyUI-BatchPromptLoader](https://github.com/ReSerendipity/ComfyUI-BatchPromptLoader) | ComfyUI 自定义节点：从 TXT 批量加载提示词（固定/递增/递减/随机） |
+| [ComfyUI-Experiment-Toolbox](https://github.com/ReSerendipity/ComfyUI-Experiment-Toolbox) | ComfyUI 采样器/调度器受控实验 + 工作流结构改造工具箱（含零依赖 Web 面板） |
+| [Lineart-Painter](https://github.com/ReSerendipity/Lineart-Painter) | 本地 AI 线稿重绘工作台：图片/视频转线稿并分阶段上色 |
+| [Card-Studio](https://github.com/ReSerendipity/Card-Studio) | 浏览器端多视图 3D 全息卡片生成器（本地 ONNX 抠图） |
+| [SpiritPal](https://github.com/ReSerendipity/SpiritPal) | 桌边友 · 跨平台 AI 桌面宠物（Tauri v2 + Live2D，本地记忆召回） |
+| [Multi-Tracker](https://github.com/ReSerendipity/Multi-Tracker) | B站/抖音/快手/小红书 AI 创作者视频下载追踪与飞书同步工具 |
+
+### Android
+
+| 项目 | 简介 |
+|---|---|
+| [DraftPeek](https://github.com/ReSerendipity/DraftPeek) | Android 原生代码/文本编辑器：内置终端、Markdown 预览、40+ 语言高亮 |
+| [GalgameShell](https://github.com/ReSerendipity/GalgameShell) | Android 上通过 Wine + Box86/Box64 运行 Windows 应用 |
+| [Android-IconAutoArrange](https://github.com/ReSerendipity/Android-IconAutoArrange) | 安卓桌面图标自动整理 PoC（走 Launcher3 官方通道，免 root） |
+
+### Web 工具与硬件小物
+
+| 项目 | 简介 |
+|---|---|
+| [Github-Repo-Scan](https://github.com/ReSerendipity/Github-Repo-Scan) | GitHub 账号仓库总览面板：CI / 许可证 / Release / Issue / Star 一张表 |
+| [Free-Model-Probe](https://github.com/ReSerendipity/Free-Model-Probe) | 免费模型清单调研与连通性测试台（ModelScope/OpenRouter） |
+| [Offer-Landing-Kit](https://github.com/ReSerendipity/Offer-Landing-Kit) | 纯前端入职衔接工具：交接清单 / 社保测算 / 试用期台账 |
+| [Unfading-Wall](https://github.com/ReSerendipity/Unfading-Wall) | 黑板·上的话：学生给老师的手写信墙，纯前端零后端 |
+| [Mooncake-Deconstruction](https://github.com/ReSerendipity/Mooncake-Deconstruction) | Three.js 3D 月饼结构可视化 Demo（零构建单 HTML） |
+| [Health-Info-Card](https://github.com/ReSerendipity/Health-Info-Card) | 老人安心牌：离线急救信息卡（ESP-IDF） |
+
+> 治理与社区健康文件（命名规范、贡献指南、Issue 模板）见 [.github](https://github.com/ReSerendipity/.github) 仓库。
+> 另有若干私有项目（Image-Scrapers、Nekogal-DL、Prompt-Library、Agent-Knowledge 等）不在此列。
