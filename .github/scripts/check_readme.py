@@ -1,6 +1,9 @@
+import re
 from pathlib import Path
+from urllib.parse import urlparse
 
 
+OWNER = "ReSerendipity"
 readme = Path("README.md").read_text(encoding="utf-8")
 required = (
     '<b style="font-size:17px;">TTS-MultiModel</b>',
@@ -24,4 +27,56 @@ for stale in (
     if stale in readme:
         raise SystemExit(f"README.md contains stale or misleading content: {stale}")
 
-print("README featured-project names, links, and license scope OK")
+
+# Structural invariants for the "全部公开项目" tables (offline-decidable only;
+# live link checks need egress, which this CI does not have — add separately
+# once network access is authorized).
+LINK_ROW_RE = re.compile(r"^\|\s*\[([^\]\|]+)\]\(([^)\|]+)\)\s*\|\s*([^|]*?)\s*\|\s*$")
+SEPARATOR_CELL_RE = re.compile(r":?-{3,}:")
+
+
+def is_separator_row(stripped_line: str) -> bool:
+    cells = [cell.strip() for cell in stripped_line.strip("|").split("|")]
+    return bool(cells) and all(SEPARATOR_CELL_RE.fullmatch(cell) for cell in cells)
+
+
+seen_slugs: dict[str, int] = {}
+row_count = 0
+for lineno, line in enumerate(readme.splitlines(), start=1):
+    stripped = line.strip()
+    if not stripped.startswith("|"):
+        continue
+    if is_separator_row(stripped):
+        continue
+    match = LINK_ROW_RE.match(stripped)
+    if match is None:
+        if stripped.startswith("| ["):
+            raise SystemExit(
+                f"README.md line {lineno}: malformed project-table row, "
+                f'expected "| [名称](URL) | 简介 |": {stripped}'
+            )
+        continue  # header and other non-project rows
+    name, url, summary = match.groups()
+    parsed = urlparse(url if "://" in url else f"https://{url}")
+    if parsed.netloc.lower() != "github.com":
+        raise SystemExit(f"README.md line {lineno}: project URL host must be github.com: {url}")
+    segments = [seg for seg in parsed.path.split("/") if seg]
+    if not segments or segments[0] != OWNER:
+        raise SystemExit(f"README.md line {lineno}: project URL must live under github.com/{OWNER}/: {url}")
+    slug = segments[-1]
+    if slug != name:
+        raise SystemExit(f"README.md line {lineno}: row name {name!r} must match URL slug {slug!r}")
+    if not summary:
+        raise SystemExit(f"README.md line {lineno}: project {name} has an empty summary")
+    if slug in seen_slugs:
+        raise SystemExit(
+            f"README.md line {lineno}: duplicate project row for {slug} "
+            f"(first seen at line {seen_slugs[slug]})"
+        )
+    seen_slugs[slug] = lineno
+    row_count += 1
+
+if row_count == 0:
+    raise SystemExit("README.md contains no project rows under 全部公开项目")
+
+print(f"README featured-project content OK; {row_count} public-project rows well-formed and unique")
