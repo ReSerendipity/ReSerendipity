@@ -65,6 +65,7 @@
 | [Unfading-Wall](https://github.com/ReSerendipity/Unfading-Wall) | 黑板·上的话：学生给老师的手写信墙，纯前端零后端 |
 | [Mooncake-Deconstruction](https://github.com/ReSerendipity/Mooncake-Deconstruction) | Three.js 3D 月饼结构可视化 Demo（零构建单 HTML） |
 | [Health-Info-Card](https://github.com/ReSerendipity/Health-Info-Card) | 老人安心牌：离线急救信息卡（ESP-IDF） |
+| [chatgpt-timezone-fix](https://github.com/ReSerendipity/chatgpt-timezone-fix) | 浏览器扩展（Chrome/Edge MV3）：按标签页一键切换时区，破解 ChatGPT 的时区检测拦截，自带生效验证 |
 
 > 治理与社区健康文件（命名规范、贡献指南、Issue 模板）见 [.github](https://github.com/ReSerendipity/.github) 仓库。
 > 另有若干私有项目（Image-Scrapers、Nekogal-DL、Prompt-Library、Agent-Knowledge 等）不在此列。
