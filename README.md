@@ -37,7 +37,7 @@
 
 | 项目 | 简介 |
 |---|---|
-| [Image-duoModel](https://github.com/ReSerendipity/Image-duoModel) | AI 图像生成平台：进程内原生引擎驱动 Z-Image Turbo，LoRA 叠加、SeedVR2 超分、批量生成、DCT 水印溯源 |
+| [Image-DuoModel](https://github.com/ReSerendipity/Image-DuoModel) | AI 图像生成平台：进程内原生引擎驱动 Z-Image Turbo，LoRA 叠加、SeedVR2 超分、批量生成、DCT 水印溯源 |
 | [MiniMax-H3-Lite](https://github.com/ReSerendipity/MiniMax-H3-Lite) | MiniMax H3 本地视频生成时间线工作台：T2V/I2V/R2V 三模式、多镜头编排，一键启动 / Docker |
 | [RTX-VSR-Lite](https://github.com/ReSerendipity/RTX-VSR-Lite) | 基于 NVIDIA RTX VSR 的独立视频超分命令行工具（RTX 20 系以上） |
 | [ComfyUI-BatchPromptLoader](https://github.com/ReSerendipity/ComfyUI-BatchPromptLoader) | ComfyUI 自定义节点：从 TXT 批量加载提示词（固定/递增/递减/随机） |
@@ -65,7 +65,7 @@
 | [Unfading-Wall](https://github.com/ReSerendipity/Unfading-Wall) | 黑板·上的话：学生给老师的手写信墙，纯前端零后端 |
 | [Mooncake-Deconstruction](https://github.com/ReSerendipity/Mooncake-Deconstruction) | Three.js 3D 月饼结构可视化 Demo（零构建单 HTML） |
 | [Health-Info-Card](https://github.com/ReSerendipity/Health-Info-Card) | 老人安心牌：离线急救信息卡（ESP-IDF） |
-| [chatgpt-timezone-fix](https://github.com/ReSerendipity/chatgpt-timezone-fix) | 浏览器扩展（Chrome/Edge MV3）：按标签页一键切换时区，破解 ChatGPT 的时区检测拦截，自带生效验证 |
+| [ChatGPT-Timezone-Fix](https://github.com/ReSerendipity/ChatGPT-Timezone-Fix) | 浏览器扩展（Chrome/Edge MV3）：按标签页一键切换时区，破解 ChatGPT 的时区检测拦截，自带生效验证 |
 
 > 治理与社区健康文件（命名规范、贡献指南、Issue 模板）见 [.github](https://github.com/ReSerendipity/.github) 仓库。
 > 另有若干私有项目（Image-Scrapers、Nekogal-DL、Prompt-Library、Agent-Knowledge 等）不在此列。
