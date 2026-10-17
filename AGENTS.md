@@ -4,10 +4,11 @@
 
 这是 GitHub **个人账号**主页仓库（profile repo，账号 `ReSerendipity` 是 user 而非 org，
 枚举公开仓库要走 `users/ReSerendipity/repos`，`orgs/...` 会 404），内容以 `README.md` 的主页卡片为主。
-本仓库唯一的**远端**自动门禁是 `.github/workflows/ci.yml`，它在 **push 到 `main`** 和**所有 PR** 上运行两步检查：
+本仓库唯一的**远端**自动门禁是 `.github/workflows/ci.yml`，它在 **push 到 `main`** 和**所有 PR** 上运行三步检查：
 
 1. `README.md` 存在且非空（`test -f` / `test -s`）；
-2. `python3 .github/scripts/check_readme.py` —— 校验精选卡片字符串、许可证表述、过期串，以及「全部公开项目」表格的**结构**不变量。
+2. `python3 .github/scripts/check_readme.py` —— 校验精选卡片字符串、许可证表述、过期串，以及「全部公开项目」表格的**结构**不变量；
+3. `python3 .github/scripts/check_public_index.py` —— 校验清单**完整性**（缺项/失效条目判红；API 无从判定时只告警）。
 
 除 ci.yml 外没有其他 CI/CD 门禁。清单完整性检查 `check_public_index.py`（见下）已作为同一个
 job 的步骤在远端运行，但它对 GitHub API 的依赖意味着**结论可能是"无法判定"**——这种情形只告警
@@ -71,6 +72,24 @@ Windows 上若无 `python3` 命令，把 `python3` 换成 `python` 等效。
 - **不要为了让 CI 通过而放宽或修改 `check_readme.py` / `check_public_index.py` / `ci.yml` 的断言**；门禁是契约的一部分。
 - 新增/删除精选卡片属于契约变更，需同步修改 `check_readme.py` 并相应核对 Apache-2.0 出现次数。
 - 改动 `README.md` 或任一脚本后，两条本地校验都要跑；提交信息里应能对应到跑过的检查结论。
+
+## 合入流程（main 受 ruleset 保护）
+
+`main` 上启用了仓库 ruleset「main: CI 必需检查 + 禁止直推/强推/删除」（enforcement=active，
+仅作用于 `refs/heads/main`）：禁止直推、禁止删除分支、禁止非快进（强推），改动必须经 PR 合入，
+且 PR 必须先通过必需检查 **`README integrity`**。所需批准人数为 **0**，因此单人为仓库可由作者
+自行合并自己的 PR；`strict_required_status_checks_policy=false`，即不强制分支先同步到最新 main。
+
+对 agent 的实际含义：**`git push origin main` 会被远端拒绝**，这不是本地配置问题，也不要试图
+绕过（不 force-push、不改保护、不 `--no-verify`）。正确路径是推功能分支再开 PR：
+
+```bash
+git switch -c <branch>
+git push origin <branch>        # 之后在 GitHub 上开 PR，等 README integrity 变绿后合并
+```
+
+若本地 main 因故领先于 origin/main 而推不上去，用 `git reset --soft origin/main` 收回提交对象
+（改动仍留在工作树），再按上面路径重做——不要为此改写已推送历史。
 
 ## Harness 复核的证据边界
 
