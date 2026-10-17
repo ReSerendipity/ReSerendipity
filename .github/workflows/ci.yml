@@ -26,3 +26,14 @@ jobs:
           echo "README.md ($(wc -c < README.md) bytes) OK"
       - name: Check featured projects and links
         run: python3 .github/scripts/check_readme.py
+      - name: Check public project index
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rc=0
+          python3 .github/scripts/check_public_index.py || rc=$?
+          if [ "$rc" -eq 2 ]; then
+            echo "::warning::public index check was inconclusive (exit 2: GitHub API unreachable); not failing the gate"
+            rc=0
+          fi
+          exit $rc

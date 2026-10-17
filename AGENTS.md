@@ -9,7 +9,9 @@
 1. `README.md` 存在且非空（`test -f` / `test -s`）；
 2. `python3 .github/scripts/check_readme.py` —— 校验精选卡片字符串、许可证表述、过期串，以及「全部公开项目」表格的**结构**不变量。
 
-除 ci.yml 外没有其他 CI/CD 门禁。另有一条**只能本地跑**的清单完整性检查 `check_public_index.py`（见下），它需要访问 GitHub API，而本 CI 无出网权限，因此**不在远端强制执行**。修改 README 或脚本前，先在本地复现这两项校验。
+除 ci.yml 外没有其他 CI/CD 门禁。清单完整性检查 `check_public_index.py`（见下）已作为同一个
+job 的步骤在远端运行，但它对 GitHub API 的依赖意味着**结论可能是"无法判定"**——这种情形只告警
+不判红。修改 README 或脚本前，先在本地复现这两项校验。
 
 ## check_readme.py 强制的内容契约
 
@@ -59,7 +61,7 @@ python3 .github/scripts/check_public_index.py
 Windows 上若无 `python3` 命令，把 `python3` 换成 `python` 等效。
 
 - `check_readme.py`：通过时打印 `README featured-project content OK; <N> public-project rows well-formed and unique`（`<N>` 是当前项目行数，会随清单变化）；失败时以缺失/违规的具体字符串或行号报错并退出非零（CI 红色）。
-- `check_public_index.py`：需要 GitHub API（复用本机已登录的 `gh`，仓库内不存任何凭据）。退出码 `0` = 清单与公开仓库集合一致，`1` = 发现缺项或已失效条目，`2` = 无法判定（`gh` 缺失、未登录或网络失败）。**`2` 不是通过**，不要把它当绿灯。
+- `check_public_index.py`：需要 GitHub API。本地复用本机已登录的 `gh`（仓库内不存任何凭据）；CI 里用作业自带的 `GITHUB_TOKEN`。退出码 `0` = 清单与公开仓库集合一致，`1` = 发现缺项或已失效条目，`2` = 无法判定（`gh` 缺失、未登录或网络失败）。**`2` 不是通过**：本地要当阻塞处理，CI 里则只发 `::warning::` 不判红（避免 API 抖动把主干变成假失败），但看到该 warning 必须手工复查一次清单。
 - 该检查声明的排除项为 `ReSerendipity`（本主页仓库自身）与 `.github`（治理与社区健康文件，README 末尾已单独给出入口）；除此之外新增公开仓库必须入表。
 
 ## 编辑守则

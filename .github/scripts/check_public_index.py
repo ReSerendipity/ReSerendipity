@@ -2,12 +2,15 @@
 
 check_readme.py verifies row *format* only; it cannot know whether a public
 repository is missing from the list, because that needs the live repo set.
-This script closes that gap offline-in-CI-free terms: run it locally before
-committing README edits.
+This script supplies that missing invariant. It runs both locally (before
+committing README edits, reusing the signed-in gh CLI) and as a CI step of the
+same "README integrity" job using the job's GITHUB_TOKEN.
 
 Exit codes: 0 = index matches the public repo set, 1 = gap found,
 2 = cannot decide (gh unavailable / unauthenticated / network failure).
-2 is deliberately not a pass.
+2 is deliberately not a pass; CI turns it into a warning rather than a red, so
+an API hiccup cannot fake-fail main -- but that warning still needs a manual
+re-check of the list.
 
 Must be run from the repository root (reads README.md by relative path).
 """
