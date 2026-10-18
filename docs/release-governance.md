@@ -23,8 +23,8 @@
 ## 2. CHANGELOG 管理
 
 - 公共口径仍为 **Keep a Changelog**（`Added / Changed / Fixed / Deprecated / Removed / Security`），`feat→Added`、`fix→Fixed`、`refactor→Changed`，发版时 `[Unreleased]` → `[VERSION] - YYYY-MM-DD`。
-- **本仓现状**：当前**无 `CHANGELOG.md`**，也无版本号与发版节奏，Keep a Changelog 暂不适用。
-- 建链触发条件：当且仅当本仓出现首个可分发产物并启动发版时，再补建 `CHANGELOG.md` 并按上述口径追加（**负责人：ReSerendipity（账号所有者）；触发条件：本仓出现首个可发布产物时**）。
+- **本仓现状**：根级 `CHANGELOG.md` 按 §10.2 要求已于 2026-10-18 建立（Keep a Changelog 结构，仅维护 `[Unreleased]`）；本仓仍无版本号与发版节奏，故尚无版本化条目。
+- 追加触发条件：此后每次合并 `main` 在 `[Unreleased]` 追加；发版时再 `[Unreleased]` → `[VERSION] - YYYY-MM-DD`（**负责人：ReSerendipity（账号所有者）**）。
 
 ## 3. 发布流程（远端）
 
