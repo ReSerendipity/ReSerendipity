@@ -91,22 +91,23 @@ git push origin <branch>        # 之后在 GitHub 上开 PR，等 README integr
 若本地 main 因故领先于 origin/main 而推不上去，用 `git reset --soft origin/main` 收回提交对象
 （改动仍留在工作树），再按上面路径重做——不要为此改写已推送历史。
 
-### 合并方式与提交身份（红线 #4 操作细则，2026-10-18 增补）
+### 合并方式与提交身份（红线 #4 操作细则，2026-10-18 增补，同日完成根治）
 
-红线 #4 要求所有提交「身份固定为 `ReSerendipity <259081123+ReSerendipity@users.noreply.github.com>`（noreply），禁止个人邮箱身份」。经 GitHub API/UI 执行的合并**不满足**这条：
+红线 #4 要求所有提交「身份固定为 `ReSerendipity <259081123+ReSerendipity@users.noreply.github.com>`（noreply），禁止个人邮箱身份」。历史上经 GitHub API/UI 执行的合并**不满足**这条：
 
 - `gh pr merge --squash`：服务端生成的 squash 提交，author 邮箱 = PR 作者的**账号公开邮箱**（实测 PR #2 → `eef084f`，author 为 `ReSerendipity@outlook.com`）；
 - `gh pr merge --merge`：合并提交同理（TTS 仓实测 `9870016`）；
 - `pulls/{n}/update-branch`：平台生成的合并提交既无签名也无 noreply（SpiritPal 仓实测）。
 
+**根治状态：已于 2026-10-18 完成。** 账号已开启 "Keep my email addresses private"，两个 outlook 地址在 Settings → Emails 均已被标记为 Private，web 端 Git 操作统一挂到上述 noreply 地址。实证：`.github` PR #8 的服务端 squash 提交 `4edce6f`，API 回读 `commit.author.email` == noreply（同一操作在变更前产出的是 outlook 邮箱）。
+
 **规则**：
 
-1. 禁止用上述三种服务端合并落库。需要合并 PR 时：
-   - PR 只有单条提交且作者已是 noreply → `gh pr merge --rebase`（rebase 保真作者字段与 Signed-off-by）；
-   - 其他情况 → 本地 `git merge --squash <branch>` + `git commit -s`（noreply 身份）后快进推送——本仓 ruleset 禁直推，故此路不通时用 `--rebase`，并把 PR 收敛成单条 noreply 提交后再合；
-   - dependabot 等 bot 作者的 PR 可用服务端合并（bot 邮箱在 noreply 域，不违反红线）。
-2. 已落库的个人邮箱提交用根目录 `.mailmap` 归一显示（不改写历史；本 PR 即首个条目）。
-3. 根治：owner 在 GitHub Settings → Emails 开启 "Keep my email addresses private" 并固定 commit 邮箱为 noreply——此为账号级设置，agent 无法代办。
+1. **三种服务端合并已解除禁令、恢复可用**（生成的提交 author 已天然 noreply）。单条 noreply 提交的 PR 仍优先用 `gh pr merge --rebase`：它同时保真 author、committer 与 `Signed-off-by`，而 squash/merge 会把 committer 盖成 `GitHub <noreply@github.com>`。
+2. **回退条件**：若 Settings → Emails 的 "Keep my email addresses private" 变回 Off，立即恢复本节原先对三种服务端合并的禁令，改走 `--rebase` 或本地 `git merge --squash` + `git commit -s`。
+3. **"Block command line pushes that expose my email" 刻意保持 Off**：SpiritPal `main` 历史含 866 条账号主邮箱提交，开启该闸会硬拒任何重放这段历史的推送，而 9 仓本地 `user.email` 已全部固定为 noreply，该闸边际收益为零。不要顺手打开它。
+4. 已落库的个人邮箱提交用根目录 `.mailmap` 归一**显示**（不改写历史）。两个已知局限：`commit.author.email` 原文在 API 上仍公开可读；`.mailmap` 自身是被跟踪的公开文件，所以完整个人邮箱地址只写在 `.mailmap` 一处，本节与其他文档一律用「账号主邮箱」指代，避免同一地址在仓内多份文件里重复出现。
+5. 2026-10-18 补漏：`ReSerendipity`、`.github`、`Image-DuoModel` 三仓的 `.mailmap` 原先只覆盖 `ReSerendipity@outlook.com`，而账号主邮箱已是另一个 outlook 地址（实测三仓 committer 字段各泄漏 1 笔），已各补一行归一。
 
 ## Harness 复核的证据边界
 
