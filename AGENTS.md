@@ -91,6 +91,23 @@ git push origin <branch>        # 之后在 GitHub 上开 PR，等 README integr
 若本地 main 因故领先于 origin/main 而推不上去，用 `git reset --soft origin/main` 收回提交对象
 （改动仍留在工作树），再按上面路径重做——不要为此改写已推送历史。
 
+### 合并方式与提交身份（红线 #4 操作细则，2026-10-18 增补）
+
+红线 #4 要求所有提交「身份固定为 `ReSerendipity <259081123+ReSerendipity@users.noreply.github.com>`（noreply），禁止个人邮箱身份」。经 GitHub API/UI 执行的合并**不满足**这条：
+
+- `gh pr merge --squash`：服务端生成的 squash 提交，author 邮箱 = PR 作者的**账号公开邮箱**（实测 PR #2 → `eef084f`，author 为 `ReSerendipity@outlook.com`）；
+- `gh pr merge --merge`：合并提交同理（TTS 仓实测 `9870016`）；
+- `pulls/{n}/update-branch`：平台生成的合并提交既无签名也无 noreply（SpiritPal 仓实测）。
+
+**规则**：
+
+1. 禁止用上述三种服务端合并落库。需要合并 PR 时：
+   - PR 只有单条提交且作者已是 noreply → `gh pr merge --rebase`（rebase 保真作者字段与 Signed-off-by）；
+   - 其他情况 → 本地 `git merge --squash <branch>` + `git commit -s`（noreply 身份）后快进推送——本仓 ruleset 禁直推，故此路不通时用 `--rebase`，并把 PR 收敛成单条 noreply 提交后再合；
+   - dependabot 等 bot 作者的 PR 可用服务端合并（bot 邮箱在 noreply 域，不违反红线）。
+2. 已落库的个人邮箱提交用根目录 `.mailmap` 归一显示（不改写历史；本 PR 即首个条目）。
+3. 根治：owner 在 GitHub Settings → Emails 开启 "Keep my email addresses private" 并固定 commit 邮箱为 noreply——此为账号级设置，agent 无法代办。
+
 ## Harness 复核的证据边界
 
 Better Harness 的会话证据按「工作区根的绝对路径」派生会话库标识，本账号下其他项目

@@ -1,0 +1,4 @@
+# 提交身份归一（红线 #4：身份固定为 noreply，禁止个人邮箱身份）
+# 历史提交中的账号公开邮箱统一显示为 noreply 身份；不改写历史。
+# 覆盖：GitHub squash/rebase/update-branch 服务端生成的提交（作者邮箱=账号公开邮箱）。
+ReSerendipity <259081123+ReSerendipity@users.noreply.github.com> <ReSerendipity@outlook.com>
