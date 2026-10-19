@@ -84,7 +84,7 @@
 
 判断依据（均可在本仓现场复核）：
 
-1. **无任何构建 / 打包 / 清单文件**：根目录仅 `README.md`、`.mailmap`、`.gitignore`、`AGENTS.md`（本地不入库）；不存在 `pyproject.toml`、`package.json`、`Cargo.toml`、`go.mod`、`Dockerfile`、`Tauri.conf.json`、`requirements*.txt` 等任何可分发物的构建入口。
+1. **无任何构建 / 打包 / 清单文件**：根目录仅 `README.md`、`.mailmap`、`.gitignore`（`AGENTS.md` 已归置 `docs/`，根目录若出现同名文件按 `.gitignore` 不入库）；不存在 `pyproject.toml`、`package.json`、`Cargo.toml`、`go.mod`、`Dockerfile`、`Tauri.conf.json`、`requirements*.txt` 等任何可分发物的构建入口。
 2. **唯一 workflow 是 README 静态门禁**：`.github/workflows/ci.yml` 只跑三步——`README.md` 存在且非空、`check_readme.py`（精选卡片字符串 / 许可表述 / 链接结构）、`check_public_index.py`（公开项目索引完整性，API 不可达时只告警）；**没有任何 build / package / release / publish job**。
 3. **无 tag、无 Release**：`git tag` 为空、`gh release list` 为空，本仓历史上从未打过 tag 或发过 Release。
 4. **README 所列项目不在本仓分发**：首页卡片与索引表格指向的 `TTS-MultiModel`、`SeedVR2-Lite`、`Image-DuoModel` 等均为**其它独立仓库**，本仓仅做链接索引，不在此构建或打包它们。

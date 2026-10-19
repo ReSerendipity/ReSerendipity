@@ -24,7 +24,7 @@ import sys
 OWNER = "ReSerendipity"
 
 # Declared exclusions: not members of "全部公开项目". Rationale is documented in
-# AGENTS.md so the decision is not re-litigated on every run.
+# docs/AGENTS.md so the decision is not re-litigated on every run.
 EXCLUDED = {
     OWNER,  # this profile repo is the page itself
     ".github",  # governance/community-health files, linked at README "治理与社区健康文件"
