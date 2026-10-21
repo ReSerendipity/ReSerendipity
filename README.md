@@ -15,7 +15,7 @@
 <table width="100%" cellspacing="0" cellpadding="0"><tr><td style="background:#ffffff;border:1px solid #d0d7de;border-radius:12px;padding:18px 22px;">
 <p style="margin:0 0 2px;"><b style="font-size:17px;">TTS-MultiModel</b>　<span style="color:#57606a;">Python · FastAPI</span></p>
 <p style="margin:0 0 10px;color:#57606a;"><i>Multi-Model Text-to-Speech Platform</i></p>
-<p style="margin:0 0 10px;">多引擎语音合成平台：VoxCPM2 与 IndexTTS 2.5，声音克隆、声音设计、多角色剧本配音、流式生成、自定义音色库，中英日韩界面，Windows / Linux / Docker 一键部署。</p>
+<p style="margin:0 0 10px;">五引擎语音合成平台：VoxCPM2、IndexTTS 2.5 / 2.0、OpenVoice、Step-Audio-EditX，声音克隆、声音设计、多角色剧本配音、流式生成、自定义音色库，中英日韩界面，Windows / Linux / Docker 一键部署。</p>
 <p style="margin:0 0 12px;color:#0969da;"><b>声音克隆</b> · <b>声音设计</b> · 多角色剧本配音 · 流式生成 · 批量处理 · Apache-2.0</p>
 <p style="margin:0;"><a href="https://github.com/ReSerendipity/TTS-MultiModel"><b>查看仓库 →</b></a></p>
 </td></tr></table>
@@ -24,8 +24,8 @@
 <table width="100%" cellspacing="0" cellpadding="0"><tr><td style="background:#ffffff;border:1px solid #d0d7de;border-radius:12px;padding:18px 22px;">
 <p style="margin:0 0 2px;"><b style="font-size:17px;">SeedVR2-Lite</b>　<span style="color:#57606a;">Python · CUDA</span></p>
 <p style="margin:0 0 10px;color:#57606a;"><i>Video &amp; Image Super-Resolution Toolkit</i></p>
-<p style="margin:0 0 10px;">SeedVR2 视频 / 图像超分辨率修复工具箱：桌面版（Tauri + NSIS + 增量更新）与网页版 / 便携包，一键及批量修复、GPU Block Swap 省显存、多语言界面，无需 ComfyUI。</p>
-<p style="margin:0 0 12px;color:#0969da;"><b>视频 · 图像一键修复</b> · 3B / 7B 模型 · FP8 · 批量处理 · Apache-2.0</p>
+<p style="margin:0 0 10px;">SeedVR2 视频 / 图像超分辨率修复工具箱：桌面版（Tauri v2 + 7z 离线包 + 增量更新）与网页版 / 便携包，一键及批量修复、GPU Block Swap 省显存、多语言界面，无需 ComfyUI。</p>
+<p style="margin:0 0 12px;color:#0969da;"><b>视频 · 图像一键修复</b> · 3B / 7B / 7B-Sharp 模型 · FP8 · 批量处理 · Apache-2.0</p>
 <p style="margin:0;"><a href="https://github.com/ReSerendipity/SeedVR2-Lite"><b>查看仓库 →</b></a> · <a href="https://reserendipity.github.io/SeedVR2-Lite/docs/"><b>文档</b></a></p>
 </td></tr></table>
 
@@ -37,7 +37,7 @@
 
 | 项目 | 简介 |
 |---|---|
-| [Image-DuoModel](https://github.com/ReSerendipity/Image-DuoModel) | AI 图像生成平台：进程内原生引擎驱动 Z-Image Turbo，LoRA 叠加、SeedVR2 超分、批量生成、DCT 水印溯源 |
+| [Image-DuoModel](https://github.com/ReSerendipity/Image-DuoModel) | 多模型 AI 图像生成平台：进程内原生引擎接入 Z-Image Turbo / Qwen-Image 2.1 Edit / Flux.2 Klein，LoRA 叠加、SeedVR2 超分、批量生成、DCT 水印溯源 |
 | [MiniMax-H3-Lite](https://github.com/ReSerendipity/MiniMax-H3-Lite) | MiniMax H3 本地视频生成时间线工作台：T2V/I2V/R2V 三模式、多镜头编排，一键启动 / Docker |
 | [RTX-VSR-Lite](https://github.com/ReSerendipity/RTX-VSR-Lite) | 基于 NVIDIA RTX VSR 的独立视频超分命令行工具（RTX 20 系以上） |
 | [ComfyUI-BatchPromptLoader](https://github.com/ReSerendipity/ComfyUI-BatchPromptLoader) | ComfyUI 自定义节点：从 TXT 批量加载提示词（固定/递增/递减/随机） |
@@ -52,13 +52,15 @@
 | 项目 | 简介 |
 |---|---|
 | [DraftPeek](https://github.com/ReSerendipity/DraftPeek) | Android 原生代码/文本编辑器：内置终端、Markdown 预览、40+ 语言高亮 |
-| [GalgameShell](https://github.com/ReSerendipity/GalgameShell) | Android 上通过 Wine + Box86/Box64 运行 Windows 应用 |
+| [GalgameShell](https://github.com/ReSerendipity/GalgameShell) | Galgame 专用 Android 运行外壳（基于 Winlator）：引擎识别 + 原生 / 模拟智能路由，导入即玩 |
 | [Android-IconAutoArrange](https://github.com/ReSerendipity/Android-IconAutoArrange) | 安卓桌面图标自动整理 PoC（走 Launcher3 官方通道，免 root） |
 
 ### Web 工具与硬件小物
 
 | 项目 | 简介 |
 |---|---|
+| [p0-murder-mystery](https://github.com/ReSerendipity/p0-murder-mystery) | P0 事故剧本杀：8 名 AI Agent、16 条线索、1024 秒限时、12 个结局的单文件文字推理游戏 |
+| [Code-Time-Machine-1024](https://github.com/ReSerendipity/Code-Time-Machine-1024) | 代码时间机器：从打孔纸带到 AI 编程，六个时代的零构建单文件互动 Demo |
 | [Github-Repo-Scan](https://github.com/ReSerendipity/Github-Repo-Scan) | GitHub 账号仓库总览面板：CI / 许可证 / Release / Issue / Star 一张表 |
 | [Free-Model-Probe](https://github.com/ReSerendipity/Free-Model-Probe) | 免费模型清单调研与连通性测试台（ModelScope/OpenRouter） |
 | [Offer-Landing-Kit](https://github.com/ReSerendipity/Offer-Landing-Kit) | 纯前端入职衔接工具：交接清单 / 社保测算 / 试用期台账 |
