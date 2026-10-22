@@ -5,3 +5,4 @@
 # §12.2 结构收敛：本地私有文件不入库；根目录 AGENTS.md 为本地副本（正本在 docs/）
 /local/
 AGENTS.md
+!/AGENTS.md
