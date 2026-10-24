@@ -7,6 +7,8 @@
 给无声以回响，给模糊以清晰，给流逝以帧影——
 让它们，成为你触手可及的日常，陪你走过以后的时光。
 
+**ReSerendipity** is a personal studio for open-source AI creation tools — text-to-speech, image and video restoration, image generation, Android utilities, and small web experiments. Each project ships with its own license and release notes; see the list below.
+
 > 治理规范：[ReSerendipity/.github/governance](https://github.com/ReSerendipity/.github/tree/main/governance)
 
 ---
