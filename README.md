@@ -59,7 +59,7 @@
 
 | 项目 | 简介 |
 |---|---|
-| [P0-Murder-Mystery](https://github.com/ReSerendipity/P0-Murder-Mystery) | P0 事故剧本杀：8 名 AI Agent、16 条线索、1024 秒限时、12 个结局的单文件文字推理游戏 |
+| [P0-Murder-Mystery](https://github.com/ReSerendipity/P0-Murder-Mystery) | P0 事故剧本杀：9 名 AI Agent、17 条线索、1024 秒限时、13 个结局的单文件文字推理游戏 |
 | [Code-Time-Machine-1024](https://github.com/ReSerendipity/Code-Time-Machine-1024) | 代码时间机器：从打孔纸带到 AI 编程，六个时代的零构建单文件互动 Demo |
 | [Github-Repo-Scan](https://github.com/ReSerendipity/Github-Repo-Scan) | GitHub 账号仓库总览面板：CI / 许可证 / Release / Issue / Star 一张表 |
 | [Website-Site-Toolchain](https://github.com/ReSerendipity/Website-Site-Toolchain) | 四个角色文本归档站的结构签名门禁工具链：只校验 frontmatter / 路径 / 编号，不含游戏正文 |
