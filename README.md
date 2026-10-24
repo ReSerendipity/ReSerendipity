@@ -7,6 +7,8 @@
 给无声以回响，给模糊以清晰，给流逝以帧影——
 让它们，成为你触手可及的日常，陪你走过以后的时光。
 
+**ReSerendipity** is a personal studio for open-source AI creation tools — text-to-speech, image and video restoration, image generation, Android utilities, and small web experiments. Each project ships with its own license and release notes; see the list below.
+
 > 治理规范：[ReSerendipity/.github/governance](https://github.com/ReSerendipity/.github/tree/main/governance)
 
 ---
@@ -60,6 +62,7 @@
 | [P0-Murder-Mystery](https://github.com/ReSerendipity/P0-Murder-Mystery) | P0 事故剧本杀：8 名 AI Agent、16 条线索、1024 秒限时、12 个结局的单文件文字推理游戏 |
 | [Code-Time-Machine-1024](https://github.com/ReSerendipity/Code-Time-Machine-1024) | 代码时间机器：从打孔纸带到 AI 编程，六个时代的零构建单文件互动 Demo |
 | [Github-Repo-Scan](https://github.com/ReSerendipity/Github-Repo-Scan) | GitHub 账号仓库总览面板：CI / 许可证 / Release / Issue / Star 一张表 |
+| [Website-Site-Toolchain](https://github.com/ReSerendipity/Website-Site-Toolchain) | 四个角色文本归档站的结构签名门禁工具链：只校验 frontmatter / 路径 / 编号，不含游戏正文 |
 | [Health-Info-Card](https://github.com/ReSerendipity/Health-Info-Card) | 老人安心牌：离线急救信息卡（ESP-IDF） |
 
 > 治理与社区健康文件（命名规范、贡献指南、Issue 模板）见 [.github](https://github.com/ReSerendipity/.github) 仓库。
