@@ -38,16 +38,16 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 
 ### 展示
 
-![ReSerendipity 账号主页](docs/assets/readme-reserendipity-1.png)
+![ReSerendipity 账号主页](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-1.png)
 *主页 · 本主页仓 README 的实况渲染：定位语、徽章行与精选项目卡片。*
 
-![项目导航页](docs/assets/readme-reserendipity-2.png)
+![项目导航页](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-2.png)
 *项目导航 · Repositories 页实况：全部公开仓库、描述、语言、许可证与更新时间。*
 
-![治理结构](docs/assets/readme-reserendipity-3.png)
+![治理结构](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-3.png)
 *治理结构 · `.github` 仓 `governance/` 目录与治理手册：政策文档的单一事实来源。*
 
-![生态与治理全景](docs/assets/readme-reserendipity-ecosystem.svg)
+![生态与治理全景](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-ecosystem.svg)
 *生态图 · 47 仓生态/治理结构图：公开/私有/归档分布、领域分组与治理链路（2026-10-25 经 GitHub API 实况核验）。*
 
 ### 快速开始
@@ -174,16 +174,16 @@ ReSerendipity is the GitHub **profile home page** of the ReSerendipity account �
 
 ### Gallery
 
-![ReSerendipity profile home](docs/assets/readme-reserendipity-1.png)
+![ReSerendipity profile home](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-1.png)
 *Profile home · live rendering of this repo's README: tagline, badge rows and featured project cards.*
 
-![Repository navigation](docs/assets/readme-reserendipity-2.png)
+![Repository navigation](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-2.png)
 *Repository navigation · live Repositories tab: public repos, descriptions, languages, licenses and update times.*
 
-![Governance structure](docs/assets/readme-reserendipity-3.png)
+![Governance structure](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-3.png)
 *Governance · `.github` repo `governance/` directory and handbook: single source of policy.*
 
-![Ecosystem & governance overview](docs/assets/readme-reserendipity-ecosystem.svg)
+![Ecosystem & governance overview](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-ecosystem.svg)
 *Ecosystem · 47-repo ecosystem/governance diagram: public/private/archived split, domain groups and governance chain (verified via GitHub API on 2026-10-25).*
 
 ### Quick Start
