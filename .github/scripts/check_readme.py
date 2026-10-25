@@ -10,7 +10,7 @@ required = (
     'href="https://github.com/ReSerendipity/TTS-MultiModel"',
     '<b style="font-size:17px;">SeedVR2-Lite</b>',
     'href="https://github.com/ReSerendipity/SeedVR2-Lite"',
-    'href="https://reserendipity.github.io/SeedVR2-Lite/docs/"',
+    "https://github.com/ReSerendipity/SeedVR2-Lite/blob/main/docs/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.md",
 )
 for text in required:
     if text not in readme:
