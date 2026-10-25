@@ -55,7 +55,7 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 本仓是导航主页，**无安装步骤**：
 
 1. **浏览**：从下方「精选项目」卡片或「全部公开项目」表格进入感兴趣的项目仓库；
-2. **运行**：进入目标仓库后按该仓 README 操作（例如 TTS-MultiModel 支持 Windows / Linux / Docker 一键部署；SeedVR2-Lite 提供桌面版与网页版，见其[文档](https://reserendipity.github.io/SeedVR2-Lite/docs/)）；
+2. **运行**：进入目标仓库后按该仓 README 操作（例如 TTS-MultiModel 支持 Windows / Linux / Docker 一键部署；SeedVR2-Lite 提供桌面版与网页版，见其[用户手册](https://github.com/ReSerendipity/SeedVR2-Lite/blob/main/docs/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.md)）；
 3. **验证**（仅维护者）：修改本 README 后，在仓库根目录运行
 
    ```bash
@@ -107,7 +107,7 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 <p style="margin:0 0 10px;color:#57606a;"><i>Video &amp; Image Super-Resolution Toolkit</i></p>
 <p style="margin:0 0 10px;">SeedVR2 视频 / 图像超分辨率修复工具箱：桌面版（Tauri v2 + 7z 离线包 + 增量更新）与网页版 / 便携包，一键及批量修复、GPU Block Swap 省显存、多语言界面，无需 ComfyUI。</p>
 <p style="margin:0 0 12px;color:#0969da;"><b>视频 · 图像一键修复</b> · 3B / 7B / 7B-Sharp 模型 · FP8 · 批量处理 · Apache-2.0</p>
-<p style="margin:0;"><a href="https://github.com/ReSerendipity/SeedVR2-Lite"><b>查看仓库 →</b></a> · <a href="https://reserendipity.github.io/SeedVR2-Lite/docs/"><b>文档</b></a></p>
+<p style="margin:0;"><a href="https://github.com/ReSerendipity/SeedVR2-Lite"><b>查看仓库 →</b></a></p>
 </td></tr></table>
 
 ### 全部公开项目
@@ -191,7 +191,7 @@ ReSerendipity is the GitHub **profile home page** of the ReSerendipity account �
 This is a navigation page — **there is nothing to install**:
 
 1. **Browse**: pick a project from the featured cards or the All Public Projects list below;
-2. **Run**: open the project repo and follow its own README (e.g. TTS-MultiModel ships one-click deploy for Windows / Linux / Docker; SeedVR2-Lite offers a desktop build and a web/portable build — see its [docs](https://reserendipity.github.io/SeedVR2-Lite/docs/));
+2. **Run**: open the project repo and follow its own README (e.g. TTS-MultiModel ships one-click deploy for Windows / Linux / Docker; SeedVR2-Lite offers a desktop build and a web/portable build — see its [user manual](https://github.com/ReSerendipity/SeedVR2-Lite/blob/main/docs/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.md));
 3. **Verify** (maintainers only): after editing this README, run from the repository root
 
    ```bash
@@ -231,7 +231,7 @@ This is a navigation page — **there is nothing to install**:
 The two featured cards are shown in the Chinese section above ([jump](#精选项目)). Shortlist:
 
 - [TTS-MultiModel](https://github.com/ReSerendipity/TTS-MultiModel) — five-engine TTS platform: VoxCPM2, IndexTTS 2.5 / 2.0, OpenVoice, Step-Audio-EditX; voice cloning, voice design, script dubbing, streaming; UI in Chinese / English / Japanese / Korean; Apache-2.0.
-- [SeedVR2-Lite](https://github.com/ReSerendipity/SeedVR2-Lite) — video & image super-resolution toolkit: desktop (Tauri v2 + 7z offline package + incremental updates) and web/portable builds; 3B / 7B / 7B-Sharp, FP8, GPU Block Swap; no ComfyUI; Apache-2.0. Docs: <https://reserendipity.github.io/SeedVR2-Lite/docs/>.
+- [SeedVR2-Lite](https://github.com/ReSerendipity/SeedVR2-Lite) — video & image super-resolution toolkit: desktop (Tauri v2 + 7z offline package + incremental updates) and web/portable builds; 3B / 7B / 7B-Sharp, FP8, GPU Block Swap; no ComfyUI; Apache-2.0. Docs: <https://github.com/ReSerendipity/SeedVR2-Lite/blob/main/docs/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.md>.
 
 ### All Public Projects
 
