@@ -1,0 +1,31 @@
+# DCO 签名检查（已接入、未启用）
+#
+# 2026-10-29 所有者决定：接入治理仓的可复用 DCO 检查，但当前没有 Actions 额度，
+# 不配置任何自动触发——本文件只有手动入口，不会自行运行。
+#
+# 启用自动检查（只改这一处）：在下面 on: 下增加 pull_request（可选 push）。
+# 启用后区间自动从事件上下文取（PR: base/head；push: before/sha），无需改其它内容。
+name: DCO sign-off
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_sha:
+        description: '区间起点（不含）'
+        required: true
+        type: string
+      head_sha:
+        description: '区间终点（含）'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  dco:
+    uses: ReSerendipity/.github/.github/workflows/dco-signoff.yml@7fcf6089ceec3385285fb18cb915db35a6424474
+    with:
+      base_sha: ${{ inputs.base_sha }}
+      head_sha: ${{ inputs.head_sha }}
+      governance_ref: 7fcf6089ceec3385285fb18cb915db35a6424474
