@@ -6,7 +6,7 @@
 [![Public repositories](https://img.shields.io/badge/public%20repositories-view-181717?logo=github)](https://github.com/ReSerendipity?tab=repositories)
 [![Repository-specific licenses](https://img.shields.io/badge/licenses-repository--specific-blue)](https://github.com/ReSerendipity?tab=repositories)
 [![Language](https://img.shields.io/badge/language-Markdown-181717)](https://github.com/ReSerendipity/ReSerendipity)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/ReSerendipity/.github/blob/main/CONTRIBUTING.md)
+[![Changes via Issues](https://img.shields.io/badge/changes-via%20Issues-blue)](https://github.com/ReSerendipity/ReSerendipity/issues)
 [![治理规范](https://img.shields.io/badge/%E6%B2%BB%E7%90%86%E8%A7%84%E8%8C%83-governance-blue)](https://github.com/ReSerendipity/.github/tree/main/governance)
 
 给无声以回响，给模糊以清晰，给流逝以帧影——
@@ -79,10 +79,10 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 ### FAQ
 
 1. **为什么有些仓库标了「已归档」？** 归档表示停止活跃开发但保留存档（如 ChatGPT-Timezone-Fix、RTX-VSR-Lite 等 8 个公开实验项目），列表与代码仍可见。
-2. **为什么没有统一的 LICENSE？** 许可证为仓库级、按项目独立管理；两个精选项目 TTS-MultiModel、SeedVR2-Lite 均为 Apache-2.0，其余以各仓库徽章 / LICENSE 为准。
+2. **为什么没有统一的 LICENSE？** 不补 LICENSE 是有意选择而非遗漏：本仓是账号主页与导航，不构成开源分发，不适用开源许可，依法默认 **© ReSerendipity 保留所有权利**；各项目仓的授权按仓库级独立管理，以其自身 LICENSE 为准（TTS-MultiModel、SeedVR2-Lite 均为 Apache-2.0）。
 3. **为什么主页仓没有 Release / tag？** 本仓是内容型主页、无可分发产物，发布链待出现可分发产物时再建（依据 `docs/release-governance.md` 与 `CHANGELOG.md`）。
 4. **某些项目为什么看不到？** 私有项目不公开（如 Image-Scrapers、Nekogal-DL、Prompt-Library、Agent-Knowledge），仅账号所有者可见。
-5. **如何把项目加入首页？** 修改「全部公开项目」表格并运行上述校验命令验证，然后开 PR；详细规范见 `.github` 仓的 [CONTRIBUTING.md](https://github.com/ReSerendipity/.github/blob/main/CONTRIBUTING.md)。
+5. **如何把项目加入首页？** 由维护者修改「全部公开项目」表格并运行上述校验命令验证；对本页的其他修改建议请以 [Issue](https://github.com/ReSerendipity/ReSerendipity/issues) 形式提出。
 
 ### 文档与治理
 
@@ -147,13 +147,13 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 
 ### 贡献 / 安全 / 支持
 
-- **贡献**：请遵循 `.github` 仓的 [CONTRIBUTING.md](https://github.com/ReSerendipity/.github/blob/main/CONTRIBUTING.md)；本主页仓的一切改动走 PR（欢迎 PRs）。
+- **贡献**：对本主页仓的改动请以 [Issue](https://github.com/ReSerendipity/ReSerendipity/issues) 形式提出；各代码仓的参与方式以其自身 README / [CONTRIBUTING.md](https://github.com/ReSerendipity/.github/blob/main/CONTRIBUTING.md) 为准。
 - **安全**：发现安全漏洞请按 [SECURITY.md](https://github.com/ReSerendipity/.github/blob/main/SECURITY.md) 私下报告，勿在公开渠道讨论。
 - **支持**：项目相关的问题请到对应仓库开 Issue / Discussion；本仓相关问题（导航、治理）可在本仓 Issues 提出。
 
 ### 许可证
 
-本仓 README 内容未单独设立 LICENSE；**许可证为仓库级、按项目独立管理**。精选项目 TTS-MultiModel 与 SeedVR2-Lite 均为 Apache-2.0，其余以各仓库徽章 / LICENSE 为准。
+本仓是账号主页与导航仓，**不适用开源许可：© ReSerendipity 保留所有权利**。未设 LICENSE 是有意选择而非遗漏——主页仓本身只承载文案与导航，不构成开源分发；许可证按仓库级独立管理，各项目的授权以其自身 LICENSE 为准（精选项目 TTS-MultiModel 与 SeedVR2-Lite 均为 Apache-2.0，其余以各仓库徽章 / LICENSE 为准）。对本仓的改动建议请以 Issue 形式提出。
 
 ---
 
@@ -215,10 +215,10 @@ This is a navigation page — **there is nothing to install**:
 ### FAQ
 
 1. **Why are some repositories archived?** Archived means development is frozen but the work stays visible (e.g. 8 public experiments such as ChatGPT-Timezone-Fix and RTX-VSR-Lite).
-2. **Why is there no single LICENSE?** Licenses are managed per repository; both featured projects (TTS-MultiModel, SeedVR2-Lite) are Apache-2.0, others carry their own repository badges / LICENSE files.
+2. **Why is there no single LICENSE?** Omitting a LICENSE is a deliberate choice, not an oversight: this repo is an account home & navigation page, not an open-source distribution, so no open-source license applies and **© ReSerendipity retains all rights by default**; each project repo's licensing is managed per repository under its own LICENSE (TTS-MultiModel and SeedVR2-Lite are both Apache-2.0).
 3. **Why does this home repo have no Release / tag?** It is a content-only page with no distributable artifacts; a release chain will be added only if such artifacts appear (see `docs/release-governance.md` and `CHANGELOG.md`).
 4. **Why can't I see some projects?** Private projects (e.g. Image-Scrapers, Nekogal-DL, Prompt-Library, Agent-Knowledge) are visible to the account owner only.
-5. **How do I get a project listed here?** Add a row to the All Public Projects tables, run the checks above, and open a PR; see [CONTRIBUTING.md](https://github.com/ReSerendipity/.github/blob/main/CONTRIBUTING.md) in the `.github` repo for the full rules.
+5. **How do I get a project listed here?** The maintainer updates the All Public Projects tables and runs the checks above; for other suggestions about this page, please open an [Issue](https://github.com/ReSerendipity/ReSerendipity/issues).
 
 ### Documentation & Governance
 
@@ -244,10 +244,10 @@ The two featured cards are shown in the Chinese section above ([jump](#精选项
 
 ### Contributing / Security / Support
 
-- **Contributing**: follow [CONTRIBUTING.md](https://github.com/ReSerendipity/.github/blob/main/CONTRIBUTING.md) in the `.github` repo; all changes to this home page go through PRs (PRs welcome).
+- **Contributing**: propose changes to this home page via an [Issue](https://github.com/ReSerendipity/ReSerendipity/issues); each code repo's participation rules are defined in its own README / [CONTRIBUTING.md](https://github.com/ReSerendipity/.github/blob/main/CONTRIBUTING.md).
 - **Security**: report vulnerabilities privately per [SECURITY.md](https://github.com/ReSerendipity/.github/blob/main/SECURITY.md); do not discuss them in public channels.
 - **Support**: open Issues / Discussions in the relevant project repo; for this home page (navigation, governance), use this repo's Issues.
 
 ### License
 
-The README content of this repository carries no standalone LICENSE; **licenses are per-project**. Both featured projects (TTS-MultiModel, SeedVR2-Lite) are Apache-2.0; others carry their own repository badges / LICENSE files.
+This repository is an account home & navigation page and is **not open-source licensed: © ReSerendipity. All rights reserved.** The absence of a LICENSE file is a deliberate choice, not an oversight — this page carries prose and navigation only and does not constitute open-source distribution; licenses are managed per repository, and each project's authorization is governed by its own LICENSE (featured projects TTS-MultiModel and SeedVR2-Lite are both Apache-2.0; others carry their own repository badges / LICENSE files). Propose changes to this repository via an Issue.
