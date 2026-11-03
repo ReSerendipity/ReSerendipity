@@ -130,7 +130,7 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 | 项目 | 简介 |
 |---|---|
 | [DraftPeek](https://github.com/ReSerendipity/DraftPeek) | Android 原生代码/文本编辑器：内置终端、Markdown 预览、40+ 语言高亮 |
-| [GalgameShell](https://github.com/ReSerendipity/GalgameShell) | Galgame 专用 Android 运行外壳（基于 Winlator）：引擎识别 + 原生 / 模拟智能路由，导入即玩 |
+| [GameShell](https://github.com/ReSerendipity/GameShell) | Galgame 专用 Android 运行外壳（基于 Winlator）：引擎识别 + 原生 / 模拟智能路由，导入即玩 |
 
 #### Web 工具与硬件小物
 
@@ -236,7 +236,7 @@ The two featured cards are shown in the Chinese section above ([jump](#精选项
 ### All Public Projects
 
 - **AI & media** (8): [Image-DuoModel](https://github.com/ReSerendipity/Image-DuoModel), [VOSR2-Lite](https://github.com/ReSerendipity/VOSR2-Lite), [MiniMax-H3-Lite](https://github.com/ReSerendipity/MiniMax-H3-Lite), [ComfyUI-Experiment-Toolbox](https://github.com/ReSerendipity/ComfyUI-Experiment-Toolbox), [ComfyUI-BatchPromptLoader](https://github.com/ReSerendipity/ComfyUI-BatchPromptLoader), [Lineart-Painter](https://github.com/ReSerendipity/Lineart-Painter), [Card-Studio](https://github.com/ReSerendipity/Card-Studio), [SpiritPal](https://github.com/ReSerendipity/SpiritPal)
-- **Android** (2): [DraftPeek](https://github.com/ReSerendipity/DraftPeek), [GalgameShell](https://github.com/ReSerendipity/GalgameShell)
+- **Android** (2): [DraftPeek](https://github.com/ReSerendipity/DraftPeek), [GameShell](https://github.com/ReSerendipity/GameShell)
 - **Web tools & hardware** (5): [P0-Murder-Mystery](https://github.com/ReSerendipity/P0-Murder-Mystery), [Code-Time-Machine-1024](https://github.com/ReSerendipity/Code-Time-Machine-1024), [Github-Repo-Scan](https://github.com/ReSerendipity/Github-Repo-Scan), [Website-Site-Toolchain](https://github.com/ReSerendipity/Website-Site-Toolchain), [Health-Info-Card](https://github.com/ReSerendipity/Health-Info-Card)
 - Plus the two featured projects above — **17 active public projects in total**.
 
