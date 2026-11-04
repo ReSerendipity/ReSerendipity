@@ -37,7 +37,7 @@
 5. 远端建 **draft Release** 并挂资产 → 人工审核后 `published`；
 6. 盯到终态：`gh run list` 确认成功；红了当场修或 revert 止损。
 
-> 当前 `.github/workflows/` 下**没有** `release.yml`，也**不会**为本仓硬建该 workflow（理由见文末「发布链现状判定」）。唯一现存 workflow 是 `ci.yml`，只跑 README 静态门禁，不属于发布链。
+> 当前 `.github/workflows/` 下**没有** `release.yml`，也**不会**为本仓硬建该 workflow（理由见文末「发布链现状判定」）。现存 workflow 是 `ci.yml`（README 静态门禁）与 `dco-signoff.yml`（DCO 签名检查，2026-10-29 接入，仅 `workflow_dispatch` 手动入口、未启用自动触发），均不属于发布链。
 
 ## 4. 分发产物与完整性
 
@@ -84,8 +84,8 @@
 
 判断依据（均可在本仓现场复核）：
 
-1. **无任何构建 / 打包 / 清单文件**：根目录仅 `README.md`、`.mailmap`、`.gitignore`（`AGENTS.md` 已归置 `docs/`，根目录若出现同名文件按 `.gitignore` 不入库）；不存在 `pyproject.toml`、`package.json`、`Cargo.toml`、`go.mod`、`Dockerfile`、`Tauri.conf.json`、`requirements*.txt` 等任何可分发物的构建入口。
-2. **唯一 workflow 是 README 静态门禁**：`.github/workflows/ci.yml` 只跑三步——`README.md` 存在且非空、`check_readme.py`（精选卡片字符串 / 许可表述 / 链接结构）、`check_public_index.py`（公开项目索引完整性，API 不可达时只告警）；**没有任何 build / package / release / publish job**。
+1. **无任何构建 / 打包 / 清单文件**：根目录仅 `README.md`、`.mailmap`、`.gitignore`（根 `AGENTS.md` 为本地文件，按 `.gitignore` 不入库）；不存在 `pyproject.toml`、`package.json`、`Cargo.toml`、`go.mod`、`Dockerfile`、`Tauri.conf.json`、`requirements*.txt` 等任何可分发物的构建入口。
+2. **现存 workflow 均非发布链**：`.github/workflows/ci.yml` 只跑三步——`README.md` 存在且非空、`check_readme.py`（精选卡片字符串 / 许可表述 / 链接结构）、`check_public_index.py`（公开项目索引完整性，API 不可达时只告警）；另有 `dco-signoff.yml`（2026-10-29 接入的手动 DCO 检查入口，未启用自动触发）；**没有任何 build / package / release / publish job**。
 3. **无 tag、无 Release**：`git tag` 为空、`gh release list` 为空，本仓历史上从未打过 tag 或发过 Release。
 4. **README 所列项目不在本仓分发**：首页卡片与索引表格指向的 `TTS-MultiModel`、`SeedVR2-Lite`、`Image-DuoModel` 等均为**其它独立仓库**，本仓仅做链接索引，不在此构建或打包它们。
 5. **内容性质**：本仓是与账号同名的 GitHub profile 主页仓，对外产出就是一份静态 Markdown 主页，本身不存在"可分发产物"。

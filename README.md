@@ -31,8 +31,8 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 
 1. **一站式项目导航** — 17 个公开活跃项目按领域归类，精选项目卡片直达（TTS-MultiModel、SeedVR2-Lite）
 2. **真实运行截图** — 主页、项目导航、治理结构均使用实况截图，所见即所得
-3. **生态全景图** — 47 个仓库（27 公开 / 20 私有）的生态分布与治理链路一图纵览
-4. **治理单一事实来源** — 规范统一沉淀在 `.github` 仓的 `governance/`（§1–§18 公共条款 + ADR 决策记录）
+3. **生态全景图** — 54 个仓库（28 公开 / 26 私有；其中 53 个已登记 `desired-state.json`，`JunctionScanner` 待登记）的生态分布与治理链路一图纵览
+4. **治理单一事实来源** — 规范统一沉淀在 `.github` 仓的 `governance/`（§1–§20 公共条款 + ADR 决策记录）
 5. **双语内容** — 中文为主、英文逐段对应，方便国内外读者
 6. **CI 门禁** — README 完整性由 `ci.yml` 自动校验（`check_readme.py` / `check_public_index.py`）
 
@@ -48,7 +48,7 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 *治理结构 · `.github` 仓 `governance/` 目录与治理手册：政策文档的单一事实来源。*
 
 ![生态与治理全景](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-ecosystem.svg)
-*生态图 · 47 仓生态/治理结构图：公开/私有/归档分布、领域分组与治理链路（2026-10-25 经 GitHub API 实况核验）。*
+*生态图 · 47 仓生态/治理结构图：公开/私有/归档分布、领域分组与治理链路（截至 2026-10-25 经 GitHub API 实况核验；该图为当日快照，当前仓数见「核心特性」）。*
 
 ### 快速开始
 
@@ -87,7 +87,8 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 ### 文档与治理
 
 - **本仓内**：`docs/agent-contract.md`（Agent 契约）、`docs/release-governance.md`（发布/回滚规范本地化）、`CHANGELOG.md`、`.mailmap`（提交身份归一）。
-- **权威治理源**：ReSerendipity/.github 仓 `governance/`——`REPOSITORY_GUIDELINES.md`（§1–§18 公共条款）、`decisions/`（ADR-0001…0008 决策记录）、`templates/`、`desired-state.json`。
+- docs 直达：[agent-contract.md](docs/agent-contract.md) · [release-governance.md](docs/release-governance.md)。
+- **权威治理源**：ReSerendipity/.github 仓 `governance/`——`REPOSITORY_GUIDELINES.md`（§1–§20 公共条款）、`decisions/`（ADR-0001…0016 决策记录）、`templates/`、`desired-state.json`。
 - **门禁**：本仓 `ci.yml` 校验 README 存在性、精选卡片内容、许可表述与公开项目索引完整性。
 
 ### 精选项目
@@ -167,8 +168,8 @@ ReSerendipity is the GitHub **profile home page** of the ReSerendipity account �
 
 1. **One-stop project navigation** — 17 active public projects grouped by domain, with featured cards (TTS-MultiModel, SeedVR2-Lite) on top
 2. **Real screenshots** — home page, repository navigation and governance structure shown as live captures
-3. **Ecosystem overview** — a 47-repo ecosystem & governance diagram (27 public / 20 private)
-4. **Single source of governance** — policy lives in the `.github` repo's `governance/` (rules §1–§18 + ADR decision records)
+3. **Ecosystem overview** — a 54-repo ecosystem & governance diagram (28 public / 26 private; 53 are registered in `desired-state.json`, `JunctionScanner` is pending registration)
+4. **Single source of governance** — policy lives in the `.github` repo's `governance/` (rules §1–§20 + ADR decision records)
 5. **Bilingual content** — Chinese first, with a full English mirror
 6. **CI gate** — README integrity is enforced by `ci.yml` (`check_readme.py` / `check_public_index.py`)
 
@@ -184,7 +185,7 @@ ReSerendipity is the GitHub **profile home page** of the ReSerendipity account �
 *Governance · `.github` repo `governance/` directory and handbook: single source of policy.*
 
 ![Ecosystem & governance overview](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-ecosystem.svg)
-*Ecosystem · 47-repo ecosystem/governance diagram: public/private/archived split, domain groups and governance chain (verified via GitHub API on 2026-10-25).*
+*Ecosystem · 47-repo ecosystem/governance diagram: public/private/archived split, domain groups and governance chain (verified via GitHub API on 2026-10-25 — a snapshot of that day; see Key Features for the current count).*
 
 ### Quick Start
 
@@ -223,7 +224,7 @@ This is a navigation page — **there is nothing to install**:
 ### Documentation & Governance
 
 - **In this repo**: `docs/agent-contract.md` (agent contract), `docs/release-governance.md` (localized release/rollback rules), `CHANGELOG.md`, `.mailmap` (commit identity normalization).
-- **Authoritative source**: `governance/` in the ReSerendipity/.github repo — `REPOSITORY_GUIDELINES.md` (§1–§18), `decisions/` (ADR-0001…0008), `templates/`, `desired-state.json`.
+- **Authoritative source**: `governance/` in the ReSerendipity/.github repo — `REPOSITORY_GUIDELINES.md` (§1–§20), `decisions/` (ADR-0001…0016), `templates/`, `desired-state.json`.
 - **Gate**: this repo's `ci.yml` validates README existence, featured-card content, license statements and full public-project index coverage.
 
 ### Featured Projects
