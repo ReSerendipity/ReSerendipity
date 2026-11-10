@@ -29,7 +29,7 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 
 ### 核心特性
 
-1. **一站式项目导航** — 17 个公开活跃项目按领域归类，精选项目卡片直达（TTS-MultiModel、SeedVR2-Lite）
+1. **一站式项目导航** — 18 个公开活跃项目按领域归类，精选项目卡片直达（TTS-MultiModel、SeedVR2-Lite）
 2. **真实运行截图** — 主页、项目导航、治理结构均使用实况截图，所见即所得
 3. **生态全景图** — 54 个仓库（28 公开 / 26 私有；其中 53 个已登记 `desired-state.json`，`JunctionScanner` 待登记）的生态分布与治理链路一图纵览
 4. **治理单一事实来源** — 规范统一沉淀在 `.github` 仓的 `governance/`（§1–§20 公共条款 + ADR 决策记录）
@@ -143,6 +143,12 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 | [Website-Site-Toolchain](https://github.com/ReSerendipity/Website-Site-Toolchain) | 四个角色文本归档站的结构签名门禁工具链：只校验 frontmatter / 路径 / 编号 |
 | [Health-Info-Card](https://github.com/ReSerendipity/Health-Info-Card) | 老人安心牌：离线急救信息卡（ESP-IDF） |
 
+#### 开发工具与自动化
+
+| 项目 | 简介 |
+|---|---|
+| [dsh-superagent](https://github.com/ReSerendipity/dsh-superagent) | DeepSeek Harness 非官方插件：把 GitHub / 本地收件目录 / 飞书群聊事件变成可执行工单，在隔离会话里跑完并回贴结果 |
+
 > 治理与社区健康文件（命名规范、贡献指南、Issue 模板）见 [.github](https://github.com/ReSerendipity/.github) 仓库。
 > 另有若干私有项目（Image-Scrapers、Nekogal-DL、Prompt-Library、Agent-Knowledge 等）不在此列。
 
@@ -166,7 +172,7 @@ ReSerendipity is the GitHub **profile home page** of the ReSerendipity account �
 
 ### Key Features
 
-1. **One-stop project navigation** — 17 active public projects grouped by domain, with featured cards (TTS-MultiModel, SeedVR2-Lite) on top
+1. **One-stop project navigation** — 18 active public projects grouped by domain, with featured cards (TTS-MultiModel, SeedVR2-Lite) on top
 2. **Real screenshots** — home page, repository navigation and governance structure shown as live captures
 3. **Ecosystem overview** — a 54-repo ecosystem & governance diagram (28 public / 26 private; 53 are registered in `desired-state.json`, `JunctionScanner` is pending registration)
 4. **Single source of governance** — policy lives in the `.github` repo's `governance/` (rules §1–§20 + ADR decision records)
@@ -239,7 +245,7 @@ The two featured cards are shown in the Chinese section above ([jump](#精选项
 - **AI & media** (8): [Image-DuoModel](https://github.com/ReSerendipity/Image-DuoModel), [VOSR2-Lite](https://github.com/ReSerendipity/VOSR2-Lite), [MiniMax-H3-Lite](https://github.com/ReSerendipity/MiniMax-H3-Lite), [ComfyUI-Experiment-Toolbox](https://github.com/ReSerendipity/ComfyUI-Experiment-Toolbox), [ComfyUI-BatchPromptLoader](https://github.com/ReSerendipity/ComfyUI-BatchPromptLoader), [Lineart-Painter](https://github.com/ReSerendipity/Lineart-Painter), [Card-Studio](https://github.com/ReSerendipity/Card-Studio), [SpiritPal](https://github.com/ReSerendipity/SpiritPal)
 - **Android** (2): [DraftPeek](https://github.com/ReSerendipity/DraftPeek), [GameShell](https://github.com/ReSerendipity/GameShell)
 - **Web tools & hardware** (5): [P0-Murder-Mystery](https://github.com/ReSerendipity/P0-Murder-Mystery), [Code-Time-Machine-1024](https://github.com/ReSerendipity/Code-Time-Machine-1024), [Github-Repo-Scan](https://github.com/ReSerendipity/Github-Repo-Scan), [Website-Site-Toolchain](https://github.com/ReSerendipity/Website-Site-Toolchain), [Health-Info-Card](https://github.com/ReSerendipity/Health-Info-Card)
-- Plus the two featured projects above — **17 active public projects in total**.
+- Plus the two featured projects above — **18 active public projects in total**.
 
 > Community & governance files live in the [.github](https://github.com/ReSerendipity/.github) repo. Some projects (Image-Scrapers, Nekogal-DL, Prompt-Library, Agent-Knowledge, …) are private and not listed here.
 
