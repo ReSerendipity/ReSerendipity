@@ -14,7 +14,7 @@
 
 ## 1. 版本号规范
 
-- 遵循 **SemVer** `MAJOR.MINOR.PATCH`；预发布用 `-alpha.N` / `-beta.N` / `-rc.N`（**仅在本仓未来出现可发布产物时适用**）。
+- 遵循 **SemVer** `MAJOR.MINOR.PATCH`；预发布用 `-alpha.N` / `-beta.N` / `-rc.N`（**仅在本仓未来出现可发布产物时适用**）。触发条件：出现可分发产物 / 首次需要版本化发布；负责人：Doro。
 - **唯一权威版本位**：**无**。本仓为账号主页 profile 仓，不维护任何版本位——仓内不存在 `pyproject.toml` / `package.json` / `Cargo.toml` / `go.mod` / `config.yaml` / `Tauri.conf.json` 等版本声明文件。
 - 必须同步的其它版本位：**无**（无版本位，故无多点漂移可言）。
 - 版本位漂移校验：**无**。无版本位可钉，暂无 `tests/test_version_consistency.py` 一类入口。
@@ -28,7 +28,7 @@
 
 ## 3. 发布流程（远端）
 
-**本仓暂无发布产物，发布链待需要时再建。** 本节保留公共流程骨架，待建链时直接套用：
+**本仓暂无发布产物，发布链待需要时再建。** 触发条件：出现可分发产物 / 首次需要版本化发布 / 引入构建链；负责人：Doro。本节保留公共流程骨架，待建链时直接套用：
 
 1. 确认 `[Unreleased]` 条目完整；
 2. 同步版本位（见 §1 清单）；
@@ -46,9 +46,9 @@
 | **无**（本仓无可分发产物） | 不适用 | 不适用 | 不适用 |
 
 - 本仓**不产出** wheel / sdist / 容器镜像 / APK / 安装包等任何可分发物。
-- **不使用 `latest` 作为发布基线**（§10.3 反模式）；未来若建镜像链，tag 只取不可变标签（semver + sha）。
-- **不使用 GPG 分离签名**（2026-10-18 裁决撤掉）；未来若有桌面分发，防伪造仅由 Tauri ed25519 更新器签名承担，`SHA256SUMS.txt` 仅用于防传输损坏。
-- 未来若推镜像：统一 `ghcr.io`、`packages: write`、镜像引用全小写、Trivy `CRITICAL,HIGH`（`ignore-unfixed`）默认阻断、开 `provenance: true` + `sbom: true`——以上均在出现镜像产物时落实，当前无对象。
+- **不使用 `latest` 作为发布基线**（§10.3 反模式）；未来若建镜像链，tag 只取不可变标签（semver + sha）。触发条件：引入镜像构建链；负责人：Doro。
+- **不使用 GPG 分离签名**（2026-10-18 裁决撤掉）；未来若有桌面分发，防伪造仅由 Tauri ed25519 更新器签名承担，`SHA256SUMS.txt` 仅用于防传输损坏。触发条件：出现桌面分发产物；负责人：Doro。
+- 未来若推镜像：统一 `ghcr.io`、`packages: write`、镜像引用全小写、Trivy `CRITICAL,HIGH`（`ignore-unfixed`）默认阻断、开 `provenance: true` + `sbom: true`——以上均在出现镜像产物时落实，当前无对象。触发条件：出现镜像产物；负责人：Doro。
 
 ## 5. 回滚
 

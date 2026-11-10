@@ -8,16 +8,16 @@
 
   <!-- ============ Header ============ -->
   <text x="750" y="56" text-anchor="middle" font-size="34" font-weight="700" fill="#1f2328">ReSerendipity 账号生态与治理全景</text>
-  <text x="750" y="92" text-anchor="middle" font-size="19" fill="#57606a">Account Ecosystem &amp; Governance — 47 repositories, verified via GitHub API on 2026-10-25</text>
+  <text x="750" y="92" text-anchor="middle" font-size="19" fill="#57606a">Account Ecosystem &amp; Governance — 54 repositories (28 public / 26 private); repository names carry the 2026-10-25 47-repo snapshot</text>
   <g font-size="16" font-weight="600" text-anchor="middle">
     <rect x="420" y="108" width="160" height="32" rx="16" fill="#ddf4ff" stroke="#54aeff"/>
-    <text x="500" y="128" fill="#0969da">合计 47 仓 · Total 47</text>
+    <text x="500" y="128" fill="#0969da">合计 54 仓 · Total 54</text>
     <rect x="590" y="108" width="170" height="32" rx="16" fill="#dafbe1" stroke="#2da44e"/>
-    <text x="675" y="128" fill="#1a7f37">27 公开 · 27 public</text>
+    <text x="675" y="128" fill="#1a7f37">28 公开 · 28 public</text>
     <rect x="770" y="108" width="170" height="32" rx="16" fill="#fbefff" stroke="#bf8700"/>
-    <text x="855" y="128" fill="#8250df">20 私有 · 20 private</text>
+    <text x="855" y="128" fill="#8250df">26 私有 · 26 private</text>
     <rect x="950" y="108" width="170" height="32" rx="16" fill="#f6f8fa" stroke="#6e7781"/>
-    <text x="1035" y="128" fill="#57606a">12 已归档 · archived</text>
+    <text x="1035" y="128" fill="#57606a">9 公开归档 · archived</text>
     <rect x="1130" y="108" width="120" height="32" rx="16" fill="#f6f8fa" stroke="#6e7781"/>
     <text x="1190" y="128" fill="#57606a">0 fork</text>
   </g>
@@ -33,10 +33,10 @@
     <text x="145" y="266" text-anchor="middle" font-size="34" fill="#0969da">19</text>
     <text x="145" y="292" text-anchor="middle" font-size="15" fill="#24292f">公开 · 活跃（含主页/治理仓）</text>
     <rect x="262" y="230" width="210" height="76" rx="10" fill="#ffffff" stroke="#6e7781"/>
-    <text x="367" y="266" text-anchor="middle" font-size="34" fill="#57606a">8</text>
+    <text x="367" y="266" text-anchor="middle" font-size="34" fill="#57606a">9</text>
     <text x="367" y="292" text-anchor="middle" font-size="15" fill="#24292f">公开 · 已归档实验</text>
     <rect x="484" y="230" width="210" height="76" rx="10" fill="#ffffff" stroke="#8250df"/>
-    <text x="589" y="266" text-anchor="middle" font-size="34" fill="#8250df">20</text>
+    <text x="589" y="266" text-anchor="middle" font-size="34" fill="#8250df">26</text>
     <text x="589" y="292" text-anchor="middle" font-size="15" fill="#24292f">私有 · 不公开</text>
   </g>
 
@@ -50,7 +50,7 @@
 
   <rect x="40" y="488" width="654" height="90" rx="10" fill="#ffffff" stroke="#d0d7de"/>
   <text x="56" y="514" font-size="18" font-weight="700" fill="#0969da">Android — 2</text>
-  <text x="56" y="546" font-size="13.5" fill="#24292f">DraftPeek（原生代码/文本编辑器） · GalgameShell（Galgame 运行外壳，基于 Winlator）</text>
+  <text x="56" y="546" font-size="13.5" fill="#24292f">DraftPeek（原生代码/文本编辑器） · GameShell（原 GalgameShell；基于 Winlator）</text>
 
   <rect x="40" y="594" width="654" height="122" rx="10" fill="#ffffff" stroke="#d0d7de"/>
   <text x="56" y="620" font-size="18" font-weight="700" fill="#0969da">Web 工具与硬件小物 · Web tools &amp; hardware — 5</text>
@@ -63,14 +63,14 @@
   <text x="56" y="790" font-size="13.5" fill="#24292f">ReSerendipity（本主页仓） · .github（社区健康文件与治理源）</text>
 
   <rect x="40" y="838" width="654" height="150" rx="10" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="56" y="864" font-size="18" font-weight="700" fill="#57606a">公开 · 已归档实验 · Archived experiments — 8</text>
+  <text x="56" y="864" font-size="18" font-weight="700" fill="#57606a">公开 · 已归档实验 · Archived experiments — 9</text>
   <text x="56" y="890" font-size="13.5" fill="#24292f">ChatGPT-Timezone-Fix · RTX-VSR-Lite · Mooncake-Deconstruction</text>
   <text x="56" y="914" font-size="13.5" fill="#24292f">Multi-Tracker · Offer-Landing-Kit · Unfading-Wall</text>
-  <text x="56" y="938" font-size="13.5" fill="#24292f">Free-Model-Probe · Android-IconAutoArrange</text>
+  <text x="56" y="938" font-size="13.5" fill="#24292f">Free-Model-Probe · Android-IconAutoArrange · Junction-Scanner</text>
   <text x="56" y="968" font-size="13.5" fill="#6e7781">停止活跃开发但保留存档，列表与代码仍公开可见</text>
 
   <rect x="40" y="1004" width="654" height="90" rx="10" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="56" y="1030" font-size="18" font-weight="700" fill="#8250df">私有 · Private — 20（不公开列举）</text>
+  <text x="56" y="1030" font-size="18" font-weight="700" fill="#8250df">私有 · Private — 26（不公开列举）</text>
   <text x="56" y="1056" font-size="13.5" fill="#24292f">README 已提及示例：Image-Scrapers · Nekogal-DL · Prompt-Library · Agent-Knowledge</text>
   <text x="56" y="1080" font-size="13.5" fill="#6e7781">含密钥备份仓、本地镜像与实验项目，不在此公开列出</text>
 
@@ -125,6 +125,6 @@
   </g>
 
   <!-- Footer -->
-  <text x="750" y="1132" text-anchor="middle" font-size="14" fill="#6e7781">口径：2026-10-25 经 GitHub API 实况核验；本仓为账号同名主页仓（ReSerendipity），对外内容是静态 Markdown 导航主页，无版本化发布产物。</text>
+  <text x="750" y="1132" text-anchor="middle" font-size="14" fill="#6e7781">口径：54 仓 = 28 公开 + 26 私有（README「核心特性」）；名称清单沿用 2026-10-25 的 47 仓快照，私有只计数量。本仓为账号同名主页仓（ReSerendipity），对外内容是静态 Markdown 导航主页。</text>
   <text x="750" y="1156" text-anchor="middle" font-size="14" fill="#6e7781">Ecosystem &amp; governance overview of the ReSerendipity account — profile-home repo, content-only, no release artifacts.</text>
 </svg>
