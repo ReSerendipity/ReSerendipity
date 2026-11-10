@@ -97,7 +97,7 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 <table width="100%" cellspacing="0" cellpadding="0"><tr><td style="background:#ffffff;border:1px solid #d0d7de;border-radius:12px;padding:18px 22px;">
 <p style="margin:0 0 2px;"><b style="font-size:17px;">TTS-MultiModel</b>　<span style="color:#57606a;">Python · FastAPI</span></p>
 <p style="margin:0 0 10px;color:#57606a;"><i>Multi-Model Text-to-Speech Platform</i></p>
-<p style="margin:0 0 10px;">五引擎语音合成平台：VoxCPM2、IndexTTS 2.5 / 2.0、OpenVoice、Step-Audio-EditX，声音克隆、声音设计、多角色剧本配音、流式生成、自定义音色库，中英日韩界面，Windows / Linux / Docker 一键部署。</p>
+<p style="margin:0 0 10px;">六引擎语音合成平台：VoxCPM2、IndexTTS 2.5 / 2.0、OpenVoice、Step-Audio-EditX、Breeze TTS 2，声音克隆、声音设计、多角色剧本配音、流式生成、自定义音色库，中英日韩界面，Windows / Linux / Docker 一键部署。</p>
 <p style="margin:0 0 12px;color:#0969da;"><b>声音克隆</b> · <b>声音设计</b> · 多角色剧本配音 · 流式生成 · 批量处理 · Apache-2.0</p>
 <p style="margin:0;"><a href="https://github.com/ReSerendipity/TTS-MultiModel"><b>查看仓库 →</b></a></p>
 </td></tr></table>
@@ -231,7 +231,7 @@ This is a navigation page — **there is nothing to install**:
 
 The two featured cards are shown in the Chinese section above ([jump](#精选项目)). Shortlist:
 
-- [TTS-MultiModel](https://github.com/ReSerendipity/TTS-MultiModel) — five-engine TTS platform: VoxCPM2, IndexTTS 2.5 / 2.0, OpenVoice, Step-Audio-EditX; voice cloning, voice design, script dubbing, streaming; UI in Chinese / English / Japanese / Korean; Apache-2.0.
+- [TTS-MultiModel](https://github.com/ReSerendipity/TTS-MultiModel) — six-engine TTS platform: VoxCPM2, IndexTTS 2.5 / 2.0, OpenVoice, Step-Audio-EditX, Breeze TTS 2; voice cloning, voice design, script dubbing, streaming; UI in Chinese / English / Japanese / Korean; Apache-2.0.
 - [SeedVR2-Lite](https://github.com/ReSerendipity/SeedVR2-Lite) — video & image super-resolution toolkit: desktop (Tauri v2 + 7z offline package + incremental updates) and web/portable builds; 3B / 7B / 7B-Sharp, FP8, GPU Block Swap; no ComfyUI; Apache-2.0. Docs: <https://github.com/ReSerendipity/SeedVR2-Lite/blob/main/docs/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.md>.
 
 ### All Public Projects
