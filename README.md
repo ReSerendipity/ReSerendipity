@@ -48,7 +48,7 @@ ReSerendipity 是账号同名主页仓，定位为**账号主页与仓库导航*
 *治理结构 · `.github` 仓 `governance/` 目录与治理手册：政策文档的单一事实来源。*
 
 ![生态与治理全景](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-ecosystem.svg)
-*生态图 · 47 仓生态/治理结构图：公开/私有/归档分布、领域分组与治理链路（截至 2026-10-25 经 GitHub API 实况核验；该图为当日快照，当前仓数见「核心特性」）。*
+*生态图 · 54 仓生态/治理结构图：公开/私有/归档分布、领域分组与治理链路（总数按「核心特性」的 54 仓口径；仓库名称清单沿用 2026-10-25 的 47 仓快照，私有仓只计数量、不列举，名称以正文为准）。*
 
 ### 快速开始
 
@@ -185,7 +185,7 @@ ReSerendipity is the GitHub **profile home page** of the ReSerendipity account �
 *Governance · `.github` repo `governance/` directory and handbook: single source of policy.*
 
 ![Ecosystem & governance overview](https://gcore.jsdelivr.net/gh/ReSerendipity/ReSerendipity@main/docs/assets/readme-reserendipity-ecosystem.svg)
-*Ecosystem · 47-repo ecosystem/governance diagram: public/private/archived split, domain groups and governance chain (verified via GitHub API on 2026-10-25 — a snapshot of that day; see Key Features for the current count).*
+*Ecosystem · 54-repo ecosystem/governance diagram: public/private/archived split, domain groups and governance chain (totals follow the 54-repo count in Key Features; the repository name list is the 2026-10-25 47-repo snapshot — private repos are counted, not listed, so names follow the body text).*
 
 ### Quick Start
 
