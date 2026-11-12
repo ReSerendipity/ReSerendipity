@@ -3,5 +3,9 @@
 .qoder/
 
 # §12.2 结构收敛：本地私有文件不入库；根 AGENTS.md 为会话入口与唯一正本（本地维护、不入库，ADR-0008）
-/local/
+/local/*
+!/local/agents/
+/local/agents/*
+!/local/agents/GOTCHAS.md
+!/local/agents/REVISION_LOG.md
 AGENTS.md
