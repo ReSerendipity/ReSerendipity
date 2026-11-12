@@ -7,11 +7,12 @@
   1. 一屏可读（行数 / 字节数上限）；
   2. 必含四块信息与两个入口（治理引用行、平台 repositories 索引）；
   3. 不得回退为长模板（展示图、HTML 卡片、完整英文镜像、软件项目章节）；
-  4. 代表项目表格仍受 7 条结构不变量约束，数量限 5–10 个；
+  4. 代表项目表格仍受 7 条结构不变量约束，且**恰好 2 个**（账号当前
+     pinned、star 最高的两个仓库；是否为 pinned 由 check_public_index.py 校验）；
   5. 过期仓库名 / 徽章串仍禁止出现。
 
 完整公开项目清单不再由 README 维护，交给 GitHub 账号 repositories 页；
-链接真实性由 check_public_index.py 校验。
+链接真实性与 pinned 一致性由 check_public_index.py 校验。
 
 Must be run from the repository root (reads README.md by relative path).
 """
@@ -24,8 +25,7 @@ from urllib.parse import urlparse
 OWNER = "ReSerendipity"
 MAX_LINES = 80
 MAX_BYTES = 8000
-MIN_FEATURED = 5
-MAX_FEATURED = 10
+EXPECTED_FEATURED = 2
 
 raw = Path("README.md").read_bytes()
 readme = raw.decode("utf-8")
@@ -126,19 +126,21 @@ for lineno, line in enumerate(lines, start=1):
     seen_slugs[slug] = lineno
     row_count += 1
 
-if not MIN_FEATURED <= row_count <= MAX_FEATURED:
+if row_count != EXPECTED_FEATURED:
     raise SystemExit(
-        f"README.md has {row_count} featured projects; 8.2 requires {MIN_FEATURED}-{MAX_FEATURED}"
+        f"README.md has {row_count} featured projects; 8.2 requires exactly "
+        f"{EXPECTED_FEATURED} (the account's pinned repos)"
     )
 
-# 表格以外的项目链接也要计入总数，避免把清单藏在散文里绕开数量上限
+# 表格以外的项目链接也要计入，避免把清单藏在散文里绕开数量上限
 linked_slugs = set(REPO_LINK_RE.findall(readme)) - {OWNER, ".github"}
-if len(linked_slugs) > MAX_FEATURED:
+if len(linked_slugs) != EXPECTED_FEATURED:
     raise SystemExit(
-        f"README.md links to {len(linked_slugs)} project repos; 8.2 caps the profile page at {MAX_FEATURED}"
+        f"README.md links to {len(linked_slugs)} project repos; 8.2 requires exactly "
+        f"{EXPECTED_FEATURED} pinned projects"
     )
 
 print(
-    f"README profile-resume contract OK; {row_count} featured projects, "
+    f"README profile-resume contract OK; {row_count} pinned featured projects, "
     f"{len(lines)} lines, {len(raw)} bytes"
 )

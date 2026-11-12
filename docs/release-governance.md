@@ -85,9 +85,9 @@
 判断依据（均可在本仓现场复核）：
 
 1. **无任何构建 / 打包 / 清单文件**：根目录仅 `README.md`、`.mailmap`、`.gitignore`（根 `AGENTS.md` 为本地文件，按 `.gitignore` 不入库）；不存在 `pyproject.toml`、`package.json`、`Cargo.toml`、`go.mod`、`Dockerfile`、`Tauri.conf.json`、`requirements*.txt` 等任何可分发物的构建入口。
-2. **现存 workflow 均非发布链**：`.github/workflows/ci.yml` 只跑三步——`README.md` 存在且非空、`check_readme.py`（精选卡片字符串 / 许可表述 / 链接结构）、`check_public_index.py`（公开项目索引完整性，API 不可达时只告警）；另有 `dco-signoff.yml`（2026-10-29 接入的手动 DCO 检查入口，未启用自动触发）；**没有任何 build / package / release / publish job**。
+2. **现存 workflow 均非发布链**：`.github/workflows/ci.yml` 只跑三步——`README.md` 存在且非空、`check_readme.py`（§8.2 简历式精简模板：长度上限、必需信息块、禁止长模板回归、恰好 2 个代表项目的表格结构）、`check_public_index.py`（代表项目链接有效性与账号 pinned 一致性；公开仓集合不可达时只告警）；另有 `dco-signoff.yml`（2026-10-29 接入的手动 DCO 检查入口，未启用自动触发）；**没有任何 build / package / release / publish job**。
 3. **无 tag、无 Release**：`git tag` 为空、`gh release list` 为空，本仓历史上从未打过 tag 或发过 Release。
-4. **README 所列项目不在本仓分发**：首页卡片与索引表格指向的 `TTS-MultiModel`、`SeedVR2-Lite`、`Image-DuoModel` 等均为**其它独立仓库**，本仓仅做链接索引，不在此构建或打包它们。
+4. **README 所列项目不在本仓分发**：代表项目链接指向的 `TTS-MultiModel`、`SeedVR2-Lite`（账号当前 pinned、star 最高的两个仓库）均为**其它独立仓库**，本仓仅做链接索引，不在此构建或打包它们；其余项目由 GitHub `?tab=repositories` 承载。
 5. **内容性质**：本仓是与账号同名的 GitHub profile 主页仓，对外产出就是一份静态 Markdown 主页，本身不存在"可分发产物"。
 
 **触发条件（何时再建链）**：当且仅当本仓未来出现可分发产物时——典型情形为 (a) 把静态主页发布到 GitHub Pages 形成可部署站点，或 (b) 本仓开始承担某包 / 镜像 / 安装包的构建分发职责——再由账号所有者授权，按 §10 建最小发布链：`push: tags: v*` 触发的 `release.yml` + 产物 `SHA256SUMS.txt`，**不引入 `latest`、不建 / 保留任何 GPG 签名流程**。负责人：**ReSerendipity（账号所有者）**。
