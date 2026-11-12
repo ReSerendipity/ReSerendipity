@@ -19,17 +19,14 @@
 
 ## 代表项目
 
+以下为账号当前 pinned、star 最高的两个项目：
+
 | 项目 | 说明 |
 |---|---|
 | [TTS-MultiModel](https://github.com/ReSerendipity/TTS-MultiModel) | 六引擎本地 TTS 工作台：声音克隆、声音设计、多角色配音，Windows / Linux / Docker（Apache-2.0） |
 | [SeedVR2-Lite](https://github.com/ReSerendipity/SeedVR2-Lite) | 视频 / 图像超分：桌面版 + 网页版，批量修复，无需 ComfyUI（Apache-2.0） |
-| [Image-DuoModel](https://github.com/ReSerendipity/Image-DuoModel) | 多模型图像生成与编辑：LoRA 叠加、超分、批量生成、水印溯源 |
-| [DraftPeek](https://github.com/ReSerendipity/DraftPeek) | Android 原生代码 / 文本编辑器：内置终端、Markdown 预览、40+ 语言高亮 |
-| [GameShell](https://github.com/ReSerendipity/GameShell) | Android 视觉小说运行器：引擎识别 + 原生 / 模拟智能路由 |
-| [SpiritPal](https://github.com/ReSerendipity/SpiritPal) | Tauri 桌面 AI 伙伴：Live2D 角色、本地记忆与专注工具 |
-| [dsh-superagent](https://github.com/ReSerendipity/dsh-superagent) | 把 GitHub / 收件目录 / 群聊事件转成隔离执行的工单并回贴结果 |
 
-完整项目索引见 [Repositories](https://github.com/ReSerendipity?tab=repositories)（含归档与实验项目，由 GitHub 自动更新，无需手工维护清单）。
+其余项目（含归档与实验项目）见 [Repositories](https://github.com/ReSerendipity?tab=repositories)，由 GitHub 自动更新，无需手工维护清单。
 
 ## 协作方式
 

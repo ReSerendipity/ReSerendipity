@@ -12,3 +12,4 @@
 ### Changed
 
 - 2026-11-12：根 `README.md` 由「仓库说明书」改为治理 §8.2 的**简历式精简模板**（260 行 / 24 KB → 42 行 / 3.1 KB）：去掉展示图、HTML 精选卡片、完整双语镜像、快速开始 / 系统要求 / 使用示例 / FAQ 等软件项目章节，以及手工维护的全部公开项目表；完整索引改由 GitHub `?tab=repositories` 承载。`check_readme.py` / `check_public_index.py` 同步换成精简契约，CI 步骤名同步。
+- 2026-11-12（二次修订）：「代表项目」收敛为账号当前 pinned、star 最高的 2 个仓库（`SeedVR2-Lite` 17★ / `TTS-MultiModel` 14★），其余项目统一交给平台索引；两条校验脚本改为「恰好 2 个且与 pinned 集合一致」（pinned 走 GraphQL 软校验）；补齐 `docs/release-governance.md` 中残留的旧 CI 口径；治理仓 §8 正文补 §8.2 交叉引用、§8.2 数量口径与索引同步。
