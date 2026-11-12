@@ -24,9 +24,9 @@ jobs:
           test -f README.md
           test -s README.md
           echo "README.md ($(wc -c < README.md) bytes) OK"
-      - name: Check featured projects and links
+      - name: Check profile README contract
         run: python3 .github/scripts/check_readme.py
-      - name: Check public project index
+      - name: Check featured project links
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

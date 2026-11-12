@@ -1,36 +1,35 @@
-"""Check that README's "全部公开项目" index covers every public repository.
+"""Check that featured-project links on the profile README are still live.
 
-check_readme.py verifies row *format* only; it cannot know whether a public
-repository is missing from the list, because that needs the live repo set.
-This script supplies that missing invariant. It runs both locally (before
-committing README edits, reusing the signed-in gh CLI) and as a CI step of the
-same "README integrity" job using the job's GITHUB_TOKEN.
+Since governance 8.2 (2026-11-12), the README is a one-screen profile resume:
+it lists a short selection of representative projects, and the complete index
+is GitHub's own repositories tab (always current, no hand-maintained table).
+Accordingly this script no longer requires the README to enumerate every
+public repository. It now verifies that every project link on the page still
+resolves to a real, public, non-fork, non-archived repo of this account.
 
-Exit codes: 0 = index matches the public repo set, 1 = gap found,
-2 = cannot decide (gh unavailable / unauthenticated / network failure).
-2 is deliberately not a pass; CI turns it into a warning rather than a red, so
-an API hiccup cannot fake-fail main -- but that warning still needs a manual
-re-check of the list.
+Runs locally (reusing the signed-in gh CLI) and as a CI step of the
+"README integrity" job using the job's GITHUB_TOKEN.
+
+Exit codes: 0 = all featured links resolve, 1 = broken/stale link or too few
+projects, 2 = cannot decide (gh unavailable / unauthenticated / network
+failure). 2 is deliberately not a pass; CI turns it into a warning, but a
+warning still needs a manual re-check.
 
 Must be run from the repository root (reads README.md by relative path).
 """
 
 import io
-import json
 import re
 import subprocess
 import sys
 
 OWNER = "ReSerendipity"
+MIN_FEATURED = 5
+FULL_INDEX = f"https://github.com/{OWNER}?tab=repositories"
 
-# Declared exclusions: not members of "全部公开项目". Rationale is documented in
-# docs/AGENTS.md so the decision is not re-litigated on every run.
-EXCLUDED = {
-    OWNER,  # this profile repo is the page itself
-    ".github",  # governance/community-health files, linked at README "治理与社区健康文件"
-}
+# Not projects: the profile repo itself and the governance/community-health hub.
+EXCLUDED = {OWNER, ".github"}
 
-# Same row shape check_readme.py accepts: | [name](url) | summary |
 ROW_URL_RE = re.compile(r"https://github\.com/ReSerendipity/([A-Za-z0-9._-]+)")
 
 
@@ -77,24 +76,27 @@ def main() -> int:
     readme = read_readme()
     if readme is None:
         return 2
+    if FULL_INDEX not in readme:
+        print(f"README.md must link to the platform-maintained full index: {FULL_INDEX}")
+        return 1
     repos = list_public_repos()
     if repos is None:
         return 2
 
-    listed = set(ROW_URL_RE.findall(readme))
-    missing = sorted(repos - listed - EXCLUDED)
-    stale = sorted(listed - repos - EXCLUDED)
+    featured = set(ROW_URL_RE.findall(readme)) - EXCLUDED
+    stale = sorted(featured - repos)
 
-    print(f"public repos (non-fork, non-archived): {len(repos)} | README-covered: {len(listed)} | excluded: {sorted(EXCLUDED)}")
-    for name in missing:
-        print(f"MISSING from 全部公开项目: {name} -> https://github.com/{OWNER}/{name}")
+    print(f"live public repos: {len(repos)} | featured links on README: {len(featured)} | excluded: {sorted(EXCLUDED)}")
     for name in stale:
-        print(f"LISTED but no longer public/active: {name}")
+        print(f"STALE featured link: {name} -> https://github.com/{OWNER}/{name} (no longer public/active)")
 
-    if missing or stale:
-        print(f"GAP: {len(missing)} missing, {len(stale)} stale")
+    if len(featured) < MIN_FEATURED:
+        print(f"GAP: only {len(featured)} featured projects; 8.2 requires at least {MIN_FEATURED}")
         return 1
-    print(f"index OK: all {len(repos - EXCLUDED)} public projects are listed")
+    if stale:
+        print(f"GAP: {len(stale)} featured link(s) no longer resolve to a live public repo")
+        return 1
+    print(f"index OK: all {len(featured)} featured projects resolve; full list at {FULL_INDEX}")
     return 0
 
 
