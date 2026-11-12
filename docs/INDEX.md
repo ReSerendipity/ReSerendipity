@@ -1,13 +1,13 @@
 # 文档索引（ReSerendipity）
 
-> 最后核对日期：2026-11-10
+> 最后核对日期：2026-11-12
 > 本文件为仓内文档入口索引，列出所有 tracked 文档路径、用途、状态。
 
 ## 现行文档
 
 | 路径 | 用途 | 状态 |
 |---|---|---|
-| [`README.md`](../README.md) | 对外项目说明（账号主页与仓库导航，中英双语） | 现行 |
+| [`README.md`](../README.md) | 对外身份简介（简历式精简模板，治理 §8.2；一屏展示作者 / 领域 / 代表项目 / 索引入口） | 现行 |
 | [`CHANGELOG.md`](../CHANGELOG.md) | 变更记录（Keep a Changelog） | 现行 |
 | [`CODE_OF_CONDUCT.md`](../CODE_OF_CONDUCT.md) | 社区行为准则 | 现行 |
 | [`SECURITY.md`](../SECURITY.md) | 安全响应流程 | 现行 |
