@@ -26,6 +26,8 @@ jobs:
           echo "README.md ($(wc -c < README.md) bytes) OK"
       - name: Check profile README contract
         run: python3 .github/scripts/check_readme.py
+      - name: README contract negative tests
+        run: python3 .github/scripts/tests/check_readme_contract.py
       - name: Check featured project links
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
